@@ -1,0 +1,790 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+    
+    
+      
+        <title>ゲームパッドで走行 - ライトローバーWebDoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#00bdd6">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="cyan" data-md-color-accent="pink">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ライトローバーWebDoc" class="md-header-nav__button md-logo" aria-label="ライトローバーWebDoc">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            ライトローバーWebDoc
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              ゲームパッドで走行
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ライトローバーWebDoc" class="md-nav__button md-logo" aria-label="ライトローバーWebDoc">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ライトローバーWebDoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        セットアップ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="セットアップ" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          セットアップ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/whatIsLightrover/" class="md-nav__link">
+        ライトローバーについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/hardwareSetup/" class="md-nav__link">
+        ハードウェアセットアップ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/softwareSetup/" class="md-nav__link">
+        ソフトウェアセットアップ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+      
+      <label class="md-nav__link" for="nav-3">
+        ROSの使用
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ROSの使用" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          ROSの使用
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutROS/" class="md-nav__link">
+        ROSとは
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basicROS/" class="md-nav__link">
+        基本操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          ゲームパッドで走行
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        ゲームパッドで走行
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    使用できるゲームパッドについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dualshock4" class="md-nav__link">
+    DualShock®4の無線接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joy" class="md-nav__link">
+    Joyパッケージのセットアップ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ゲームパッドの接続とデバイスファイルパスの確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    デバイスファイルパスをパラメータとして設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    移動量指令値の確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    操作方法のカスタマイズ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ゲームパッド操作サンプルの実行
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouseCtrl/" class="md-nav__link">
+        マウス操作で走行
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../gmapping/" class="md-nav__link">
+        SLAMをしよう
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../navigation/" class="md-nav__link">
+        自律走行させよう
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/trademark/" class="md-nav__link">
+        商標について
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    使用できるゲームパッドについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dualshock4" class="md-nav__link">
+    DualShock®4の無線接続
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#joy" class="md-nav__link">
+    Joyパッケージのセットアップ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    ゲームパッドの接続とデバイスファイルパスの確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    デバイスファイルパスをパラメータとして設定
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    移動量指令値の確認
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    操作方法のカスタマイズ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    ゲームパッド操作サンプルの実行
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="_1">ゲームパッドで走行しよう</h1>
+<p>ライトローバーに市販のゲームパッドを接続して走行させてみましょう。</p>
+<h2 id="_2">使用できるゲームパッドについて</h2>
+<p>アナログスティック入力機能を有するUSB接続のもの、またはPS4のコントローラ（DualShock®4）を、お客様にてご用意ください。ゲームパッドの種類によっては、デバイスドライバが非対応で動作しない可能性もございます。</p>
+<h2 id="dualshock4">DualShock®4の無線接続</h2>
+<p>DualShock®4（以下DS4）をBluetooth接続で使用される場合は、以下の方法でセットアップおよび接続を行ってください。USBで接続される場合はこの手順は不要です。<br />
+<br></p>
+<ol>
+<li>
+<p>ds4drvのインストール<br />
+   DS4とRaspberry PiをペアリングするためのPythonドライバ<a href="https://github.com/chrippa/ds4drv">ds4drv</a>をpipでインストールします。<br />
+   ターミナルを立ち上げ以下のコマンドを入力してください。  </p>
+<div class="highlight"><pre><span></span><code>sudo pip install ds4drv
+</code></pre></div>
+<p>一度インストールを行えば、次回からは以降の手順だけを行うだけで使用できます。<br />
+   <br></p>
+</li>
+<li>
+<p>ds4drvの起動とペアリング<br />
+   ターミナルに以下のコマンドを入力し、ds4drvを起動します。  </p>
+<div class="highlight"><pre><span></span><code>sudo ds4drv
+</code></pre></div>
+<p>以下のような表示が出れば、ペアリング待機状態です。  </p>
+<div class="highlight"><pre><span></span><code>[info][bluetooth] Scanning for devices
+</code></pre></div>
+<p>DS4をペアリングモードにします。<br />
+   DS4の端面にあるライトバーが白く点滅するまで、「PSボタン」と「SHARE」ボタンを押し続けます。<br />
+   ライトが点滅したらペアリングモードになっていますので、ボタンから指を離してください。<br />
+   <br>
+   ds4drvを起動したターミナルを確認し、以下のような表示になっていれば、接続完了です。  </p>
+<div class="highlight"><pre><span></span><code>[info][bluetooth] Found device xx:xx:xx:xx:xx:xx  
+[info][controller 1] Connected to Bluetooth Controller (xx:xx:xx:xx:xx:xx)
+</code></pre></div>
+<p>ds4drvは引き続き起動し続けてください。  </p>
+</li>
+</ol>
+<h2 id="joy">Joyパッケージのセットアップ</h2>
+<p>ROSでゲームパッドを使うためのパッケージ「Joy」をセットアップします。<br />
+バイナリでは配布されていないため、ソースからビルドします。<br />
+インターネット接続が必要です。<br />
+<br>
+ターミナルで以下のコマンドを入力し、catkin_wsへ移動します。  </p>
+<pre><code>cd /home/pi/catkin_ws/src
+</code></pre>
+<p>次のコマンドで、GithubからJoyパッケージのソースをクローンします。  </p>
+<pre><code>git clone https://github.com/ros-drivers/joystick_drivers.git
+</code></pre>
+<p>ビルドします。  </p>
+<pre><code>catkin build
+</code></pre>
+<p>セットアップは以上で完了です。  </p>
+<h2 id="_3">ゲームパッドの接続とデバイスファイルパスの確認</h2>
+<p>Raspberry Piにゲームパッドを接続しない状態で、ターミナルで以下のコマンドを入力してください。</p>
+<pre><code>ls /dev/input
+</code></pre>
+<p>入力デバイスとして認識されていものが一覧で表示されます。<br />
+※表示内容は環境によって変わります。
+<img alt="image" src="../../img/ls_dev_input_1.png" />  </p>
+<p>Raspberry PiにUSBでゲームパッドを接続するか、DS4をbluetoothで接続してください。<br />
+ターミナルで再び以下のコマンドを入力します。</p>
+<pre><code>ls /dev/input
+</code></pre>
+<p><img alt="image" src="../../img/ls_dev_input_2.png" />  </p>
+<p>接続前後を比較すると「js0」が増えていることが分かります。<br />
+これがゲームパッドのデバイスファイルです。<br />
+この場合は、ファイルのパスは“/dev/input/js0”となります。<br />
+デバイスファイル名は、機種やゲームパッドを接続するタイミングによって変化しますので、都度確認してください。</p>
+<h2 id="_4">デバイスファイルパスをパラメータとして設定</h2>
+<p>確認したゲームパッドのデバイスファイルパスを、ゲームパッド操作サンプルのlaunchファイル「pos_joycon.launch」にパラメータとして設定します。<br />
+launchファイルをgeditで開きましょう。  </p>
+<pre><code>gedit /home/pi/catkin_ws/src/lightrover_ros/launch/pos_joycon.launch
+</code></pre>
+<p>ファイルマネージャで開いていただいても構いません。<br />
+次の行を探してください。  </p>
+<pre><code>&lt;param name=”dev” type=”string” value=“/dev/input/js0” /&gt;
+</code></pre>
+<p>launchファイルでは、param要素を用いることでパラメータを設定することができます。<br />
+name属性がパラメータ名、value属性がパラメータ値です。<br />
+<br>
+“value=”以下を先ほど取得したゲームパッドのデバイスファイルパスに書き換えてください。<br />
+書き換えが完了したら保存して閉じてください。</p>
+<h2 id="_5">移動量指令値の確認</h2>
+<p>ライトローバーへの移動量指令値が正しく出力されるか確認します。<br />
+ターミナルで次のコマンドを実行し、joycon.launchを呼び出します。  </p>
+<pre><code>roslaunch lightrover_ros joycon_test.launch
+</code></pre>
+<p>このlaunchファイルではライトローバーは走行しません。<br />
+コントローラからの入力に対して、移動指令が正しく出力されているか確認してみましょう。新しくターミナルをたち上げ、次のコマンドを実行してください。  </p>
+<pre><code>rostopic echo /rover_drive
+</code></pre>
+<p>“rostopic echo メッセージ名”は、ノード間でやり取りされているメッセージを見ることができるコマンドです。<br />
+ここでは、メッセージ名に“/rover_drive”を指定して、ライトローバーの移動速度指令値[m/s]と、旋回速度指令値[rad/s]を確認します。<br />
+アナログスティックを動かし、rostopic echoの応答を確認しましょう。  </p>
+<p><img alt="image" src="../../img/rostopic_echo_rover_drive_1.png" />  </p>
+<p>アナログスティックを動かすことで、上図のようにlinear.xおよびangular.zの値が変化すれば、指令値は正しく出力されています。<br />
+初期状態では、linear.xの最大値は0.1m/s、angular.zの最大値は2.0rad/sに設定されています。<br />
+linearは並進移動量を、angularは旋回量を表しており、x,y,zはそれぞれ座標軸です。
+<br>
+「何も値が出てこない場合」や「片方の値しか変化しない場合」は、操作方法のカスタマイズが必要です。<br />
+あるいは、値は両方とも変化したが、アナログスティックの割り当てが不自然で操作しづらいときなども、操作方法のカスタマイズを行ってください。  </p>
+<h2 id="_6">操作方法のカスタマイズ</h2>
+<p>「rover_gamepad.py」を編集することで、操作方法をカスタマイズすることができます。<br />
+以下のコマンドでファイルを開きましょう。</p>
+<pre><code>gedit ~/catkin_ws/src/lightrover_ros/scripts/rover_gamepad.py
+</code></pre>
+<p>次のカ所を見つけてください。</p>
+<pre><code>def call_back(data):
+  global speed
+
+  speed.linear.x = data.axes[1]*0.1
+  speed.angular.z = data.axes[2]*2.0
+</code></pre>
+<p>詳細を解説します。  </p>
+<pre><code>def call_back(data):
+</code></pre>
+<p>call_backは特定のメッセージが配信された際に呼び出される関数です。<br />
+rover_gamepad.pyでは、joy_nodeから配信される/joyメッセージをトリガーにして実行されるよう記述されています。<br />
+メッセージは引数（data）に格納されます。  </p>
+<pre><code>  speed.linear.x = data.axes[1]*0.1
+  speed.angular.z = data.axes[2]*2.0
+</code></pre>
+<p>ここで、アナログスティックの入力をもとに移動速度と旋回速度の指令値を計算しています。<br />
+speedは/rover_driveに使用しているgeometry_msgs/Twist型のオブジェクトです。<br />
+linear.xはローバーの前後方向の並進移動速度、angular.zはローバーの旋回軸方向の旋回速度です。<br />
+<br>
+data.axesにはアナログスティックの入力値が含まれています。<br />
+アナログスティックのどの方向の入力が配列の何番目に入っているかはゲームパッドによって差があるため、確認が必要です。<br />
+joycon_test.launchを終了してしまった場合は再度起動してください。  </p>
+<pre><code>roslaunch lightrover_ros joycon_test.launch
+</code></pre>
+<p>次のコマンドでゲームパッドからの入力値を確認します。</p>
+<pre><code>rostopic echo /joy
+</code></pre>
+<p><img alt="image" src="../../img/rostopic_echo_joy_1.png" />  </p>
+<p>上図は“rostopic echo /joy”で、ゲームパッドの3番ボタンを押しながらアナログスティックを倒した際の応答例です。<br />
+アナログスティックの入力値はaxes配列に、ボタンの入力値はbuttons配列に格納されていることが分かります。<br />
+<br>
+axes配列要素のうち、ライトローバーの前後移動に使いたい要素と、左右旋回に使いたい要素がそれぞれ何番目に入っているかを確認し、rover_gamepad.pyに設定します。<br />
+例えば、前後移動に使いたい要素が0番目に、左右旋回に使いたい要素が2番目に入っている場合は以下のようになります。  </p>
+<pre><code>  speed.linear.x = data.axes[0]*0.1
+  speed.angular.z = data.axes[2]*2.0
+</code></pre>
+<p>また、axesと掛けている"0.1", "2.0"を変更することで最高速度を変更することが可能です。</p>
+<h2 id="_7">ゲームパッド操作サンプルの実行</h2>
+<p>いよいよライトローバーをゲームパッドで動かしてみましょう。<br />
+USBゲームパッドまたは、DS4を接続し、以下のコマンドを実行してください。  </p>
+<pre><code>roslaunch lightrover_ros joycon.launch
+</code></pre>
+<p>ゲームパッドを操作して、ライトローバーを走行させてみましょう。<br />
+机の上などで試す場合は、落下しないようご注意ください。  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../basicROS/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                基本操作
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../mouseCtrl/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                マウス操作で走行
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
