@@ -820,6 +820,11 @@ catkin buildを実行します。  </p>
 <pre><code>catkin build
 </code></pre>
 <p>これでlightrover_rosパッケージのインストールは完了です。<br />
+しかし、このままではパッケージに含まれるPythonファイルに実行権限がなく起動できません。<br />
+以下のコマンドで権限を付けましょう。</p>
+<pre><code>sudo chmod +x ~/catkin_ws/src/lightrover_ros/scripts/*.py
+</code></pre>
+<p>これで実行する準備が整いました。<br />
 現在のターミナルはパスが通っていないので、ターミナルを立ち上げ直してパスが通っている状態にしてください。<br />
 <br>
 以上で、ライトローバーをROSで制御する準備が整いました。
