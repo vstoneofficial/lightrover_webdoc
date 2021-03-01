@@ -639,15 +639,15 @@ name属性がパラメータ名、value属性がパラメータ値です。<br /
 書き換えが完了したら保存して閉じてください。</p>
 <h2 id="_5">移動量指令値の確認</h2>
 <p>ライトローバーへの移動量指令値が正しく出力されるか確認します。<br />
-ターミナルで次のコマンドを実行し、joycon.launchを呼び出します。  </p>
+ターミナルで次のコマンドを実行し、joycon_test.launchを呼び出します。  </p>
 <pre><code>roslaunch lightrover_ros joycon_test.launch
 </code></pre>
 <p>このlaunchファイルではライトローバーは走行しません。<br />
 コントローラからの入力に対して、移動指令が正しく出力されているか確認してみましょう。新しくターミナルをたち上げ、次のコマンドを実行してください。  </p>
 <pre><code>rostopic echo /rover_drive
 </code></pre>
-<p>“rostopic echo メッセージ名”は、ノード間でやり取りされているメッセージを見ることができるコマンドです。<br />
-ここでは、メッセージ名に“/rover_drive”を指定して、ライトローバーの移動速度指令値[m/s]と、旋回速度指令値[rad/s]を確認します。<br />
+<p>“rostopic echo トピック名”は、ノード間でやり取りされているメッセージを見ることができるコマンドです。<br />
+ここでは、トピック名に“/rover_drive”を指定して、ライトローバーの移動速度指令値[m/s]と、旋回速度指令値[rad/s]を確認します。<br />
 アナログスティックを動かし、rostopic echoの応答を確認しましょう。  </p>
 <p><img alt="image" src="../../img/rostopic_echo_rover_drive_1.png" />  </p>
 <p>アナログスティックを動かすことで、上図のようにlinear.xおよびangular.zの値が変化すれば、指令値は正しく出力されています。<br />
@@ -679,7 +679,7 @@ rover_gamepad.pyでは、joy_nodeから配信される/joyメッセージをト�
 </code></pre>
 <p>ここで、アナログスティックの入力をもとに移動速度と旋回速度の指令値を計算しています。<br />
 speedは/rover_driveに使用しているgeometry_msgs/Twist型のオブジェクトです。<br />
-linear.xはローバーの前後方向の並進移動速度、angular.zはローバーの旋回軸方向の旋回速度です。<br />
+linear.xはローバーの前後方向の並進移動速度、angular.zはローバーの旋回軸周りの旋回速度です。<br />
 <br>
 data.axesにはアナログスティックの入力値が含まれています。<br />
 アナログスティックのどの方向の入力が配列の何番目に入っているかはゲームパッドによって差があるため、確認が必要です。<br />
@@ -702,7 +702,7 @@ axes配列要素のうち、ライトローバーの前後移動に使いたい�
 <h2 id="_7">ゲームパッド操作サンプルの実行</h2>
 <p>いよいよライトローバーをゲームパッドで動かしてみましょう。<br />
 USBゲームパッドまたは、DS4を接続し、以下のコマンドを実行してください。  </p>
-<pre><code>roslaunch lightrover_ros joycon.launch
+<pre><code>roslaunch lightrover_ros pos_joycon.launch
 </code></pre>
 <p>ゲームパッドを操作して、ライトローバーを走行させてみましょう。<br />
 机の上などで試す場合は、落下しないようご注意ください。  </p>
