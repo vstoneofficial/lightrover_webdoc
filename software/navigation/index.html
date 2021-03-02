@@ -550,17 +550,25 @@ ROSではnavigationスタックという形でこれらの機能が提供され�
 LiDARでは捉えられない高さに障害物があったり、イスやテーブルの脚といった小さな障害物が多く存在する環境では正常に動作させることが難しくなります。  </p>
 <h2 id="navigation_1">navigationのセットアップ</h2>
 <p>gmappingを用いたSLAMの際にnavigationをセットアップした場合は、この項目は不要です。<br />
-次のコマンドでcatkin_wsに移動します。  </p>
+まずは、依存しているライブラリをインストールします。  </p>
+<pre><code>sudo apt install libbullet-dev libsdl-image1.2-dev libsdl-dev
+</code></pre>
+<p>次のコマンドでcatkin_wsに移動します。  </p>
 <pre><code>cd ~/catkin_ws/src
 </code></pre>
-<p>githubからnavigationのソースコードをクローンします。  </p>
-<pre><code>git clone https://github.com/ros-planning/navigation.git
+<p>githubからnavigationのソースコードをクローンします。<br />
+-bオプションでmelodic-develブランチを指定しています。  </p>
+<pre><code>git clone -b melodic-devel https://github.com/ros-planning/navigation.git
 </code></pre>
 <p>navigationの依存パッケージであるnavigation_msgsもクローンします。  </p>
-<pre><code>git clone https://github.com/ros-planning/navigation_msgs.git
+<pre><code>git clone -b ros1 https://github.com/ros-planning/navigation_msgs.git
 </code></pre>
-<p>ビルドしましょう。  </p>
-<pre><code>catkin build navigation
+<p>もうひとつの依存パッケージgeometry2もクローンします。  </p>
+<pre><code>git clone -b melodic-devel https://github.com/ros/geometry2.git
+</code></pre>
+<p>ビルドしましょう。<br />
+10分程度時間がかかります。  </p>
+<pre><code>catkin build
 </code></pre>
 <p>ビルドエラーが出なければ、navigationのセットアップは完了です。  </p>
 <h2 id="launch">地図の作成とlaunchファイルの編集</h2>
@@ -603,7 +611,7 @@ launchファイルをgeditで開きます。  </p>
 <li>
 <p>launchファイルの呼び出し<br />
     地図を作製したポイントにライトローバーを置き、以下のコマンドを使用してlaunchファイルを呼び出します。  </p>
-<div class="highlight"><pre><span></span><code>roslaunch lightrover_samples lightrover_move_base_dwa.launch
+<div class="highlight"><pre><span></span><code>roslaunch lightrover_ros lightrover_move_base_dwa.launch
 </code></pre></div>
 <p>以下に示すように、Rviz上に作成した地図とLiDARが捉えている物体情報が表示されることを確認してください。<br />
 オレンジ色の点がLiDARが検出してる物体です。<br />

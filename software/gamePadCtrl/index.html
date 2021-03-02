@@ -603,6 +603,9 @@
 <p>次のコマンドで、GithubからJoyパッケージのソースをクローンします。  </p>
 <pre><code>git clone https://github.com/ros-drivers/joystick_drivers.git
 </code></pre>
+<p>rosdepを使って、依存関係を解決します。  </p>
+<pre><code>rosdep install -i --from-paths ~/catkin_ws/src/joystick_drivers/
+</code></pre>
 <p>ビルドします。  </p>
 <pre><code>catkin build
 </code></pre>

@@ -350,6 +350,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ydlidar" class="md-nav__link">
+    YDLiDARのセットアップ
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -590,6 +597,13 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#ydlidar" class="md-nav__link">
+    YDLiDARのセットアップ
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -810,7 +824,7 @@ catkin buildを実行します。  </p>
 <p>以上で、ワークスペースの作成が完了です。</p>
 <h3 id="lightrover_ros">lightrover_rosパッケージのインストール</h3>
 <p>作成したワークスペースにライトローバーをROSから制御するためのパッケージ「lightrover_ros」をセットアップしましょう。<br />
-新たにターミナルを立ち上げて、次のコマンドでワークスペースのソースフォルダに移動します。  </p>
+新たにターミナルを立ち上げて、次のコマンドでワークスペースのsrcフォルダに移動します。  </p>
 <pre><code>cd ~/catkin_ws/src
 </code></pre>
 <p>次のコマンドで、Githubからlightrover_rosパッケージのソースをクローンします。</p>
@@ -825,9 +839,37 @@ catkin buildを実行します。  </p>
 <pre><code>sudo chmod +x ~/catkin_ws/src/lightrover_ros/scripts/*.py
 </code></pre>
 <p>これで実行する準備が整いました。<br />
-現在のターミナルはパスが通っていないので、ターミナルを立ち上げ直してパスが通っている状態にしてください。<br />
+現在のターミナルはパスが通っていないので、ターミナルを立ち上げ直してパスが通っている状態にしてください。  </p>
+<h3 id="ydlidar">YDLiDARのセットアップ</h3>
+<p>ライトローバーに取付けられているLiDAR「YDLiDAR X2」を使用できるように、セットアップを行っていきましょう。
+まずは、YDLiDAR用のROSデバイスドライバパッケージを入手します。
+ワークスペースのsrcフォルダに移動しましょう。</p>
+<pre><code>cd ~/catkin_ws/src
+</code></pre>
+<p>次のコマンドで、Githubからydlidar_rosパッケージのソースをクローンします。</p>
+<pre><code>git clone https://github.com/YDLIDAR/ydlidar_ros
+</code></pre>
+<p>catkin buildします。</p>
+<pre><code>catkin build
+</code></pre>
+<p>続いて、YDLiDAR X2接続時の手間を省くため、シンボリックリンクを張る操作を行います。<br />
+Ubuntuにデバイスを接続するとデバイスファイルが作成されてアクセスできるようになるのですが、デバイスファイル名は接続ポートやタイミングによって変わってきてしまうため、毎回デバイスファイル名でアクセスするのは不便です。<br />
+次の手順でスクリプトを実行することで、ydlidarのデバイスファイルに対して決まった名前でシンボリックリンクを張るようになりますので、毎回決まった名前でアクセスすることが可能になります。<br />
+新しくターミナルを起動し、スクリプトがあるディレクトリに移動します。  </p>
+<pre><code>roscd ydlidar_ros/startup/
+</code></pre>
+<p>スクリプトファイルに権限をつけます。  </p>
+<pre><code>sudo chmod 777 ./*
+</code></pre>
+<p>スクリプトファイルを実行しましょう。  </p>
+<pre><code>udo sh initenv.sh
+</code></pre>
+<p>スクリプトが完了したらターミナルを再起動し、Raspberry Piに接続されているYDLiDARのUSBケーブルを一度抜差ししてください。<br />
 <br>
-以上で、ライトローバーをROSで制御する準備が整いました。
+YDLiDARのセットアップは完了です。</p>
+<p><br>
+<br>
+以上で、ライトローバーをROSで制御する準備が整いました。<br />
 引き続き、<a href="../../software/aboutROS/">ROSとは</a>の項目で、ROSの概要について確認することができます。  </p>
                 
               
