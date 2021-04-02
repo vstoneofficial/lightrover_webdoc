@@ -14,7 +14,7 @@
     
     
       
-        <title>基本操作 - ライトローバーWebDoc</title>
+        <title>モータパラメータの設定 - ライトローバーWebDoc</title>
       
     
     
@@ -66,7 +66,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ros" class="md-skip">
+        <a href="#_1" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -98,7 +98,7 @@
         <div class="md-header-nav__topic">
           <span class="md-ellipsis">
             
-              基本操作
+              モータパラメータの設定
             
           </span>
         </div>
@@ -261,14 +261,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
       
       <label class="md-nav__link" for="nav-3">
         ROSの使用
@@ -297,124 +295,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          基本操作
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../basicROS/" class="md-nav__link">
         基本操作
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="目次">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      目次
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ros_1" class="md-nav__link">
-    ROSの基本操作
-  </a>
-  
-    <nav class="md-nav" aria-label="ROSの基本操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基本用語
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roscore" class="md-nav__link">
-    roscoreの起動
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosrosrun" class="md-nav__link">
-    rosノードの実行(rosrun)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roslaunch" class="md-nav__link">
-    roslaunchの使用
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
-    ノードの終了
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roscd" class="md-nav__link">
-    roscdによるディレクトリ移動
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rostopic" class="md-nav__link">
-    rostopicの使用
-  </a>
-  
-    <nav class="md-nav" aria-label="rostopicの使用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rostopic-list" class="md-nav__link">
-    rostopic list
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rostopic-echo" class="md-nav__link">
-    rostopic echo
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -480,12 +365,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
       
       <label class="md-nav__link" for="nav-4">
         Tips
@@ -502,11 +389,63 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../adjustMParam/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          モータパラメータの設定
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         モータパラメータの設定
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    ライトローバーのモータ制御方法
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    パラメータについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    パラメータ設定方法
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -558,84 +497,23 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ros_1" class="md-nav__link">
-    ROSの基本操作
-  </a>
-  
-    <nav class="md-nav" aria-label="ROSの基本操作">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    基本用語
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roscore" class="md-nav__link">
-    roscoreの起動
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rosrosrun" class="md-nav__link">
-    rosノードの実行(rosrun)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#roslaunch" class="md-nav__link">
-    roslaunchの使用
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    ノードの終了
+    ライトローバーのモータ制御方法
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#roscd" class="md-nav__link">
-    roscdによるディレクトリ移動
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    パラメータについて
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#rostopic" class="md-nav__link">
-    rostopicの使用
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    パラメータ設定方法
   </a>
-  
-    <nav class="md-nav" aria-label="rostopicの使用">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rostopic-list" class="md-nav__link">
-    rostopic list
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rostopic-echo" class="md-nav__link">
-    rostopic echo
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -652,133 +530,51 @@
               
                 
                 
-                <h1 id="ros">ROSとライトローバーの基本操作</h1>
-<p>ROSは基本的にコマンドラインを使って操作します。ここでは、ROSの基本操作となるコマンドと、ライトローバーをROSを使って制御するために必要な手順について紹介します。</p>
-<h2 id="ros_1">ROSの基本操作</h2>
-<h3 id="_1">基本用語</h3>
-<p>ROSを使用する際によく登場する用語の一覧です。</p>
+                <h1 id="_1">モータパラメータの設定</h1>
+<p>ライトローバーが走行時にプルプルと震える場合や、ゲームパッドからの指令に対して十分な速度で走行しない場合、モータパラメータが適切でない可能性があります。<br />
+パラメータを変更してモータをスムーズに回転させるようにする方法を解説します。</p>
+<h2 id="_2">ライトローバーのモータ制御方法</h2>
+<p>ライトローバーには、エンコーダ付きDCモータが搭載されています。<br />
+制御基板VS-WRC201はモータのエンコーダ値の読み取りおよびデューティー比の変更によるモータ制御が可能で、エンコーダ値に基づく比例制御の機能を有しています。
+<br>
+ライトローバーの標準サンプルでは、この比例制御の機能を使用し、位置補償による速度制御を行うことで走行をしています。</p>
+<h2 id="_3">パラメータについて</h2>
+<p>調整可能なパラメータは次の2種類です。
+左右のモータそれぞれに対して、異なるパラメータの設定が可能です。</p>
 <table>
 <thead>
 <tr>
-<th align="left">用語</th>
-<th align="left">用語(英語)</th>
-<th align="left">意味</th>
+<th align="center">パラメータ名</th>
+<th align="left">効果</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td align="left">マスター</td>
-<td align="left">master</td>
-<td align="left">ノードやトピックの管理をするプロセス</td>
+<td align="center">Pゲイン</td>
+<td align="left">目標エンコーダ値と計測エンコーダ値との差に対して働く比例ゲインです。<br>大きな値ほど、小さなエンコーダ値の差に対して大きな出力が発生します。<br>最小値：0x0000<br>最大値：0x1000<br>初期値：0x0080</td>
 </tr>
 <tr>
-<td align="left">ノード</td>
-<td align="left">node</td>
-<td align="left">ロボット制御システムを構成する一つ一つのプロセス</td>
-</tr>
-<tr>
-<td align="left">パッケージ</td>
-<td align="left">package</td>
-<td align="left">特定の機能を実現するためのノードの集まり</td>
-</tr>
-<tr>
-<td align="left">トピック</td>
-<td align="left">topic</td>
-<td align="left">pub/sub型で非同期のノード間通信方法</td>
-</tr>
-<tr>
-<td align="left">メッセージ</td>
-<td align="left">message</td>
-<td align="left">トピックでやり取りされるデータ</td>
-</tr>
-<tr>
-<td align="left">サブスクライバー</td>
-<td align="left">subscriber</td>
-<td align="left">トピックを受信（購読）するノード</td>
-</tr>
-<tr>
-<td align="left">パブリッシャー</td>
-<td align="left">publisher</td>
-<td align="left">トピックを送信（配信）するノード</td>
-</tr>
-<tr>
-<td align="left">サービス</td>
-<td align="left">service</td>
-<td align="left">リクエスト/リプライ型のノード間通信方法</td>
-</tr>
-<tr>
-<td align="left">パラメータ</td>
-<td align="left">parameter</td>
-<td align="left">ノード外から動的に変更も可能なノード内変数</td>
+<td align="center">パンチ</td>
+<td align="left">モータ出力の最低値です。比例制御の結果計算された出力値がこの値以下だった場合、出力値が最低値まで引き上げられます。<br>最小値：0x0000<br>最大値：0x1000<br>初期値：0x09C4</td>
 </tr>
 </tbody>
 </table>
-<h3 id="roscore">roscoreの起動</h3>
-<p>ROSシステムの基幹となるROS masterなどのプログラムを立ち上げるコマンドがroscoreです。ROSを使用する際には常に立ち上がっているようにする必要があります。<br />
-画面左上のメニューから、アクセサリ-&gt;LXTerminalを選択するか、キーボードの <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span> を押してターミナルを起動し、次のコマンドを実行してください。</p>
-<pre><code>roscore
+<h2 id="_4">パラメータ設定方法</h2>
+<p>catkin_wsに導入いただいたligthrover_rosパッケージのscriptsフォルダ内にある、下記のファイルをテキストエディタで開いてください。  </p>
+<ul>
+<li>pos_controller.py</li>
+</ul>
+<p>pos_controller.pyは、VS-WRC201に対して速度指令値に応じた目標エンコーダ値を逐次送信しているノードです。<br />
+pos_controller.pyのpos_cntrl()メソッドにある下記の部分を探してください。</p>
+<pre><code>write_msg(MS16_FB_PG0,0x0080,2,'w')
+write_msg(MS16_FB_PG1,0x0080,2,'w')
+write_msg(MU16_FB_PCH0,0x09C4,2,'w')
+write_msg(MU16_FB_PCH1,0x09C4,2,'w')
 </code></pre>
-<p>次のような画面が表示されれば、無事にroscoreが起動しています。</p>
-<h3 id="rosrosrun">rosノードの実行(rosrun)</h3>
-<p>ROSのノードを実行するためにはrosrunというコマンドを使用します。</p>
-<pre><code>rosrun [パッケージ名] [ノード名]
-</code></pre>
-<p>例えば、ジョイスティックからの入力を取得する機能を持つ「joy」パッケージに含まれる「joy_node」というノードを起動するコマンドは、次のようになります。</p>
-<pre><code>rosrun joy joy_node
-</code></pre>
-<p>ノードの起動に合わせて、引数を設定することもできます。<br />
-例えば、joy_nodeの~deadzoneパラメータを設定することで、アナログスティックのデットゾーンを変更することができます。</p>
-<pre><code>rosrun joy joy_node _deadzone:=0.1
-</code></pre>
-<p>rosrunの引数について、詳しくは以下のページで解説されています。<br />
-<a href="http://wiki.ros.org/Remapping%20Arguments">ROS.org Remapping Arguments</a></p>
-<h3 id="roslaunch">roslaunchの使用</h3>
-<p>ROSでは複数のノードを立ち上げることでシステムを構成します。<br />
-そのため、ノードをいちいちrosrunで起動していては面倒です。<br />
-roslaunchは複数のノードをまとめて起動したり終了させることができる仕組みです。<br />
-<br>
-roslaunchでは、あらかじめ特定の書式に従って記述したlaunchファイルを使用します。<br />
-launchファイルとroslaunchを使用することで、以下のようなことが可能となります。<br />
-* 複数のノードをまとめて起動
-* 名前空間を使用した同一ノードの複数起動
-* パラメータの設定
-* リマップの使用（トピック名やノード名の変更）
-* 条件分岐の使用（引数でパラメータや起動するノードを変更することができる）</p>
-<p>roslaunchコマンドは以下のように使用できます。</p>
-<pre><code>roslaunch [パッケージ名] [launchファイル名]
-</code></pre>
-<p>また、rosrunと同様に引数を設定することもできます。<br />
-<br>
-パッケージの中には、ユーザーが簡単に使用できるよう、あらかじめlaunchファイルが含まれている物も多くあります。<br />
-例えば、ライトローバー用のROSパッケージ「lightrover_ros」には、ライトローバーをゲームパッドで操作するために必要なノードをまとめて立ち上げる「pos_joycon.launch」が含まれています。pos_joycon.launchは、以下のコマンドで起動することができます。  </p>
-<pre><code>roslaunch lightrover_ros pos_joycon.launch
-</code></pre>
-<h3 id="_2">ノードの終了</h3>
-<p>ノードを終了させる方法はいくつかあります。<br />
-ここではライトローバーを使用する際に、最もよく使用する方法のみ紹介します。<br />
-* ノードを実行しているターミナルがアクティブな状態で、<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span>を押してください</p>
-<p>rosrunで起動した場合でも、roslaunchを使用した場合でも、どちらでも終了することができます。また、roscoreも終了することができます。</p>
-<h3 id="roscd">roscdによるディレクトリ移動</h3>
-<p>roscdコマンドを使用することにより、パッケージのディレクトリへ素早く移動することができます。</p>
-<pre><code>roscd [パッケージ名]
-</code></pre>
-<p>単に移動するだけでなく、パスが通っているかどうかの確認にも使用できます。</p>
-<h3 id="rostopic">rostopicの使用</h3>
-<p>rostopicはトピックに関する様々な操作を行うことができるコマンドです。<br />
-ここでは、良く使われるいくつかを紹介します。<br />
-より詳しい情報は以下のページで得ることができます。<br />
-<a href="http://wiki.ros.org/rostopic">ROS.rog rostopic</a></p>
-<h4 id="rostopic-list">rostopic list</h4>
-<p>現在存在しているトピックの一覧を表示します。</p>
-<pre><code>rostopic list
-</code></pre>
-<h4 id="rostopic-echo">rostopic echo</h4>
-<p>特定のトピックで配信されたメッセージの内容を表示します。  </p>
-<pre><code>rostopic echo [トピック名]
-</code></pre>
-<p>例えば、ライトローバーの速度指令値として使用している/rover_driveトピックの値を見る場合、以下のコマンドを使用します。</p>
-<pre><code>rostopic echo /rover_drive
-</code></pre>
+<p>この4行で、Pゲインとパンチのパラメータを設定しています。<br />
+write_msg()は、VS-WRC201のメモリマップの指定の箇所に、指定されたデータ長のデータを書き込むメソッドです。<br />
+引数は順番にwrite_msg(書き込むメモリマップのアドレス, 書き込む値, データのバイト長, 書込み命令)です。<br />
+よって第二引数を適当な値に変更していただくことで、モータの挙動を調整いただくことができます。</p>
                 
               
               
@@ -797,7 +593,7 @@ launchファイルとroslaunchを使用することで、以下のようなこ�
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../aboutROS/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../navigation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -806,19 +602,19 @@ launchファイルとroslaunchを使用することで、以下のようなこ�
                 <span class="md-footer-nav__direction">
                   前
                 </span>
-                ROSとは
+                自律走行させよう
               </div>
             </div>
           </a>
         
         
-          <a href="../gamePadCtrl/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../FAQ/trademark/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   次
                 </span>
-                ゲームパッドで走行
+                商標について
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
