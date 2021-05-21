@@ -1,0 +1,983 @@
+
+<!doctype html>
+<html lang="ja" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.5">
+    
+    
+      
+        <title>Gazeboモデルについて - ライトローバーWebDoc</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.15aa0b43.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.75751829.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#00bdd6">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/earlyaccess/notosansjp.css">
+    
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:600,800">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="cyan" data-md-color-accent="pink">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#gazebo" class="md-skip">
+          コンテンツにスキップ
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="ライトローバーWebDoc" class="md-header-nav__button md-logo" aria-label="ライトローバーWebDoc">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            ライトローバーWebDoc
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Gazeboモデルについて
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="検索" placeholder="検索" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="ライトローバーWebDoc" class="md-nav__button md-logo" aria-label="ライトローバーWebDoc">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    ライトローバーWebDoc
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        セットアップ
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="セットアップ" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          セットアップ
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/whatIsLightrover/" class="md-nav__link">
+        ライトローバーについて
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/hardwareSetup/" class="md-nav__link">
+        ハードウェアセットアップ
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/softwareSetup/" class="md-nav__link">
+        ソフトウェアセットアップ
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        ROSの使用
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="ROSの使用" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          ROSの使用
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/aboutROS/" class="md-nav__link">
+        ROSとは
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/basicROS/" class="md-nav__link">
+        基本操作
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/gamePadCtrl/" class="md-nav__link">
+        ゲームパッドで走行
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/mouseCtrl/" class="md-nav__link">
+        マウス操作で走行
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/gmapping/" class="md-nav__link">
+        SLAMをしよう
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/navigation/" class="md-nav__link">
+        自律走行させよう
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      
+      <label class="md-nav__link" for="nav-4">
+        Gazeboモデル
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Gazeboモデル" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Gazeboモデル
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Gazeboモデルについて
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Gazeboモデルについて
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gazebo_1" class="md-nav__link">
+    ライトローバーGazeboモデルについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    動作確認環境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    導入方法
+  </a>
+  
+    <nav class="md-nav" aria-label="導入方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lightrover_ros" class="md-nav__link">
+    lightrover_rosパッケージのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    その他必須パッケージのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightrover_description" class="md-nav__link">
+    lightrover_descriptionパッケージのインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用方法
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rviz" class="md-nav__link">
+    Rvizでのモデル表示確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gazebo_2" class="md-nav__link">
+    Gazeboシミュレータの立ち上げ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    マウス（タッチパッド）による操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ゲームパッドによる操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slamgmapping" class="md-nav__link">
+    SLAM(gmapping)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    navigation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Tips
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Tips" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Tips
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../software/adjustMParam/" class="md-nav__link">
+        モータパラメータの設定
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/trademark/" class="md-nav__link">
+        商標について
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#gazebo_1" class="md-nav__link">
+    ライトローバーGazeboモデルについて
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    動作確認環境
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    導入方法
+  </a>
+  
+    <nav class="md-nav" aria-label="導入方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#lightrover_ros" class="md-nav__link">
+    lightrover_rosパッケージのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    その他必須パッケージのインストール
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lightrover_description" class="md-nav__link">
+    lightrover_descriptionパッケージのインストール
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    使用方法
+  </a>
+  
+    <nav class="md-nav" aria-label="使用方法">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#rviz" class="md-nav__link">
+    Rvizでのモデル表示確認
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gazebo_2" class="md-nav__link">
+    Gazeboシミュレータの立ち上げ
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    マウス（タッチパッド）による操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    ゲームパッドによる操作
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#slamgmapping" class="md-nav__link">
+    SLAM(gmapping)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#navigation" class="md-nav__link">
+    navigation
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="gazebo">Gazeboモデル</h1>
+<h2 id="gazebo_1">ライトローバーGazeboモデルについて</h2>
+<p>ライトローバーGazeboモデルは、Gazeboで使用可能なライトローバーのモデルファイルです。<br />
+実機と同じサイズで、二輪駆動による走行、LiDARによる障害物検知のシミュレーションを行うことができます。<br />
+Gazebo上での動作の安定化のため、実機と比べて質量、重心位置を調整しています。
+<br>
+あくまでシミュレーション用のモデルのため、実機と異なる挙動となることもあるかと思いますが、ご了承ください。</p>
+<h2 id="_1">動作確認環境</h2>
+<p>以下の環境で動作確認を行っています。  </p>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="left"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center">OS</td>
+<td align="left">Ubuntu 18.04</td>
+</tr>
+<tr>
+<td align="center">ROS</td>
+<td align="left">ROS Melodic</td>
+</tr>
+<tr>
+<td align="center">Gazebo</td>
+<td align="left">9.0.0</td>
+</tr>
+<tr>
+<td align="center">CPU</td>
+<td align="left">Core i5 8259U</td>
+</tr>
+<tr>
+<td align="center">メモリ</td>
+<td align="left">8GB</td>
+</tr>
+<tr>
+<td align="center">ストレージ</td>
+<td align="left">SSD 256GB</td>
+</tr>
+<tr>
+<td align="center">グラフィック</td>
+<td align="left">Intel Iris Plus Graphics 655</td>
+</tr>
+</tbody>
+</table>
+<p>ライトローバーに搭載されているRaspberry Piでは動作確認を行っておりませんのでご注意ください。</p>
+<h2 id="_2">導入方法</h2>
+<p>ROS desktopの導入およびcatkinワークスペースは作成済みとします。<br />
+ここでは、catkinワークスペースのディレクトリ名を「catkin_ws」として記述します。 
+またビルドコマンドには「catkin build」を使用しますが、「catkin_make」でも使用可能です。 </p>
+<h3 id="lightrover_ros">lightrover_rosパッケージのインストール</h3>
+<p>ライトローバーGazeboモデルの動作にはlightrover_rosパッケージが必要です。</p>
+<p>シェルを立ち上げ次のコマンドでcatkin_wsに移動します。  </p>
+<pre><code>cd ~/catkin_ws/src
+</code></pre>
+<p>githubからlightrover_rosのソースコードをクローンします。  </p>
+<pre><code>git clone https://github.com/vstoneofficial/lightrover_ros.git
+</code></pre>
+<p>ビルドしましょう。  </p>
+<pre><code>catkin build lightrover_ros
+</code></pre>
+<p>ビルドエラーが出なければ、lightrover_rosのセットアップは完了です。</p>
+<h3 id="_3">その他必須パッケージのインストール</h3>
+<p>シェルを立ち上げ、次のコマンドで必須パッケージをインストールします。</p>
+<pre><code>sudo apt install ros-melodic-joint-state-controller ros-melodic-effort-controllers ros-melodic-position-controllers ros-melodic-ros-control ros-melodic-ros-controllers
+</code></pre>
+<h3 id="lightrover_description">lightrover_descriptionパッケージのインストール</h3>
+<p>ライトローバーGazeboモデルは、lightrover_descriptionパッケージによって提供されます。</p>
+<p>シェルを立ち上げ、次のコマンドでcatkin_wsに移動します。  </p>
+<pre><code>cd ~/catkin_ws/src
+</code></pre>
+<p>githubからlightrover_descriptionのソースコードをクローンします。  </p>
+<pre><code>git clone https://github.com/vstoneofficial/lightrover_description.git
+</code></pre>
+<p>ビルドしましょう。  </p>
+<pre><code>catkin build
+</code></pre>
+<p>ビルドエラーが出なければ、lightrover_descriptionのセットアップは完了です。  </p>
+<h2 id="_4">使用方法</h2>
+<p>シェルを立ち上げ、roscoreの起動を完了しておいてください。  </p>
+<h3 id="rviz">Rvizでのモデル表示確認</h3>
+<p>シェルを立ち上げ、以下のコマンドを入力してください。  </p>
+<pre><code>roslaunch lightrover_description display_on_rviz.launch
+</code></pre>
+<p>正常に動作した場合、以下の画像のようにrvizが起動し、ライトローバーのモデルが表示されます。  </p>
+<p><img alt="image" src="../../img/display_the_model_on_rviz.png" /></p>
+<p>もしも以下の画像のようにモデルが真っ白に表示され、RobotModel等の項目でエラーが出ている場合、起動したdisplay_on_rviz.launchおよびroscoreを一度終了させた後、再度起動をお試しください。</p>
+<p><img alt="image" src="../../img/display_the_model_on_rviz_err.png" /></p>
+<h3 id="gazebo_2">Gazeboシミュレータの立ち上げ</h3>
+<p>シェルを立ち上げ、以下のコマンドを入力してください。
+なお、display_on_rviz.launchを起動している場合は予め終了しておいてください。</p>
+<pre><code>roslaunch lightrover_description gazebo_sample_world.launch
+</code></pre>
+<p>以下のようにGazeboが立ち上がり、ライトローバーが出現します。</p>
+<p><img alt="image" src="../../img/gazebo_view_1.png" /></p>
+<p>青い面は、LiDARから発せられるレーザーを表しています。<br />
+この状態で、視点移動やオブジェクトの配置等が可能です。<br />
+視点を調整すると、以下のように、ライトローバーを横から確認することもできます。  </p>
+<p><img alt="image" src="../../img/gazebo_view_2.png" /></p>
+<p>以上でシミュレータ環境の準備が整いました。<br />
+lightrover_descriptionパッケージには、sample_world以外のworldでモデルを起動できるlaunchファイルが含まれています。以下で起動可能です。<br />
+<br>
+〇empty_world(ライトローバー以外のオブジェクトが無いワールド)</p>
+<pre><code>roslaunch lightrover_description gazebo_empty_world.launch
+</code></pre>
+<p><br>
+また、launchファイルの以下の部分を書き換えて頂くか、起動時に引数として指定頂くことで、他の任意ワールドファイルでシミュレータ環境を起動することができます。   </p>
+<pre><code>&lt;arg name=&quot;world_name&quot; value=&quot;$(find lightrover_description)/worlds/lightrover_sample.world&quot;/&gt;
+</code></pre>
+<p>シミュレータを起動したら、シミュレータ上のライトローバーを制御するノードを起動していきます。<br />
+実機のライトローバーを制御するノードを起動するのと同様にお考え下さい。<br />
+<br></p>
+<h3 id="_5">マウス（タッチパッド）による操作</h3>
+<p>マウス（タッチパッド）を用いて速度指令値を出力するmouse-teleopを使用してみましょう。<br />
+mouse-teleopを導入していない場合は、<a href="../../software/mouseCtrl/">マウス操作で走行ページ</a>の手順に従い、mouse-teleopをインストールしてください。<br />
+<br>
+シェルを起動し、以下のコマンドを実行します。</p>
+<pre><code>roslaunch lightrover_description lightrover_mousectrl.launch
+</code></pre>
+<p>しばらく待つと、以下のような画面が表示されます。  </p>
+<p><img alt="image" src="../../img/mouse_teleop_1.png" /></p>
+<p>画面上でマウスをドラッグすることで、ライトローバーを走行させることができます。  </p>
+<h3 id="_6">ゲームパッドによる操作</h3>
+<p>PCに接続したゲームパッドを用いて速度指令値を出力してみましょう。<br />
+<a href="../../software/gamePadCtrl/">ゲームパッドで走行</a>のページを参考に、必要パッケージや設定値のセットアップを行ってください。<br />
+使用するゲームパッドのデバイスファイルパスを確認したら、以下のコマンドでlaunchファイルを開き、確認したファイルパスを記述してください。  </p>
+<pre><code>gedit ~/catkin_ws/src/lightrover_description/launch/lightrover_joycon.launch
+</code></pre>
+<p>一通りの設定が完了したら、シェルで以下のコマンドを実行します。  </p>
+<pre><code>roslaunch lightrover_description lightrover_joycon.launch
+</code></pre>
+<p>コントローラーを操作し、Gazeboの中でライトローバーが走行するjことを確認してください。<br />
+<br></p>
+<h3 id="slamgmapping">SLAM(gmapping)</h3>
+<p>シミュレーション環境で地図を作ってみましょう。<br />
+<a href="../../software/gmapping/">SLAMをしよう</a>ではソースからビルドしていますが、通常のUbuntu PCの環境であればバイナリインストールも可能です。  </p>
+<pre><code>sudo apt install ros-melodic-slam-gmapping ros-melodic-navigation
+</code></pre>
+<p>インストールが完了したら次のlaunchファイルでgmappingを起動します。</p>
+<pre><code>roslaunch lightrover_description lightrover_gmapping.launch
+</code></pre>
+<p>新たなシェルでlightrover_mousectrl.launchまたはlightrover_joycon.launchを起動してライトローバーを走行させ、地図を作成していきましょう。  </p>
+<p><img alt="image" src="../../img/gazebo_gmapping_1.png" /></p>
+<p>地図が完成したら<a href="../../software/gmapping/">SLAMをしよう</a>の手順に従い保存してください。<br />
+<br></p>
+<h3 id="navigation">navigation</h3>
+<p>gmappingを使って作成した地図を使って、シミュレーター上のライトローバーを自律走行させてみましょう。
+<a href="../../software/navigation/">自律走行させよう</a>の記載に従い、navigationスタックのセットアップおよび地図の作成と移動を行ってください。<br />
+<br>
+以下のコマンドでライトローバーGazeboモデル用のnavigationのlaunchファイルを開き、移動させた地図のパスを設定します。  </p>
+<pre><code>gedit ~/catkin_ws/src/lightrover_description/launch/lightrover_move_base_dwa.launch
+</code></pre>
+<p>地図ファイルのパスを設定するのはlaunchファイルの以下の箇所です。</p>
+<pre><code>&lt;arg name=&quot;map_file&quot; default=&quot;$(find lightrover_ros)/map/test.yaml&quot;/&gt;　
+</code></pre>
+<p>launchファイルを起動したら<a href="../../software/navigation/">自律走行させよう</a>の手順に従い、ライトローバーモデルを走行させてみましょう。<br />
+<br>
+なお、ここで使用しているlightrover_move_base_dwa.launchは、使用するパラメータとしてlightrover_rosパッケージにある実機用のパラメータを使用しています。<br />
+シミュレータ用に行ったパラメータの変更は実機の挙動にも反映されるのでご注意ください。  </p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../software/navigation/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  前
+                </span>
+                自律走行させよう
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../../software/adjustMParam/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  次
+                </span>
+                モータパラメータの設定
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.93c04032.min.js"></script>
+      <script src="../../assets/javascripts/bundle.83e5331e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u30af\u30ea\u30c3\u30d7\u30dc\u30fc\u30c9\u3078\u30b3\u30d4\u30fc", "clipboard.copied": "\u30b3\u30d4\u30fc\u3057\u307e\u3057\u305f", "search.config.lang": "ja", "search.config.pipeline": "trimmer, stemmer", "search.config.separator": "[\\s\\-\u3000\u3001\u3002\uff0c\uff0e]+", "search.placeholder": "\u691c\u7d22", "search.result.placeholder": "\u691c\u7d22\u30ad\u30fc\u30ef\u30fc\u30c9\u3092\u5165\u529b\u3057\u3066\u304f\u3060\u3055\u3044", "search.result.none": "\u4f55\u3082\u898b\u3064\u304b\u308a\u307e\u305b\u3093\u3067\u3057\u305f", "search.result.one": "1\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.other": "#\u4ef6\u898b\u3064\u304b\u308a\u307e\u3057\u305f", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
