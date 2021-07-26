@@ -652,6 +652,9 @@ gmappingで作成した地図を保存するためにnavigationの機能を使�
 <p>次のコマンドでgmappingを実行しましょう。  </p>
 <pre><code>roslaunch lightrover_ros gmapping.launch
 </code></pre>
+<p>Gazeboのシミュレーションを使用している場合は、以下のコマンドとなります。  </p>
+<pre><code>roslaunch lightrover_description lightrover_gmapping.launch
+</code></pre>
 <p>gmappingが起動すると次のようにRvizが起動し画面が表示されます。  </p>
 <p><img alt="image" src="../../img/gmapping_1.png" />  </p>
 <p>Rviz上にはLRFが捉えている障害物と、生成される地図がリアルタイムで表示されます。<br />

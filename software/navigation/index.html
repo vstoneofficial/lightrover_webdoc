@@ -701,6 +701,9 @@ launchファイルをgeditで開きます。  </p>
     地図を作製したポイントにライトローバーを置き、以下のコマンドを使用してlaunchファイルを呼び出します。  </p>
 <div class="highlight"><pre><span></span><code>roslaunch lightrover_ros lightrover_move_base_dwa.launch
 </code></pre></div>
+<p>Gazeboのシミュレーションを使用している場合は、以下のlaunchとなります。  </p>
+<div class="highlight"><pre><span></span><code>roslaunch lightrover_description lightrover_move_base_dwa.launch
+</code></pre></div>
 <p>以下に示すように、Rviz上に作成した地図とLiDARが捉えている物体情報が表示されることを確認してください。<br />
 オレンジ色の点がLiDARが検出してる物体です。<br />
 <img alt="image" src="../../img/navigation_1.png" />  </p>

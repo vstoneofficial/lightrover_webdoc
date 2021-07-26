@@ -895,6 +895,9 @@ mouse-teleopを導入していない場合は、<a href="../../software/mouseCtr
 <p>地図ファイルのパスを設定するのはlaunchファイルの以下の箇所です。</p>
 <pre><code>&lt;arg name=&quot;map_file&quot; default=&quot;$(find lightrover_ros)/map/test.yaml&quot;/&gt;　
 </code></pre>
+<p>ファイルパスを設定後launchファイルを保存し、以下のコマンドでlaunchファイルを起動します。</p>
+<pre><code>roslaunch lightrover_description lightrover_move_base_dwa.launch
+</code></pre>
 <p>launchファイルを起動したら<a href="../../software/navigation/">自律走行させよう</a>の手順に従い、ライトローバーモデルを走行させてみましょう。<br />
 <br>
 なお、ここで使用しているlightrover_move_base_dwa.launchは、使用するパラメータとしてlightrover_rosパッケージにある実機用のパラメータを使用しています。<br />
