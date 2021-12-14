@@ -14,7 +14,7 @@
     
     
       
-        <title>Raspberry Pi OS - ライトローバーWebDoc</title>
+        <title>Ubuntu MATE - ライトローバーWebDoc</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#-raspberry-pi-os-" class="md-skip">
+        <a href="#-ubuntu-mate-" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Raspberry Pi OS
+              Ubuntu MATE
             
           </span>
         </div>
@@ -285,6 +285,20 @@
               
   
   
+  
+    <li class="md-nav__item">
+      <a href="../softwareSetup/" class="md-nav__link">
+        Raspberry Pi OS
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
     
   
   
@@ -297,12 +311,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Raspberry Pi OS
+          Ubuntu MATE
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Raspberry Pi OS
+        Ubuntu MATE
       </a>
       
         
@@ -327,11 +341,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#raspberry-pi-os" class="md-nav__link">
-    Raspberry Pi OSのセットアップ
+  <a href="#ubuntu-mate" class="md-nav__link">
+    Ubuntu MATEのセットアップ
   </a>
   
-    <nav class="md-nav" aria-label="Raspberry Pi OSのセットアップ">
+    <nav class="md-nav" aria-label="Ubuntu MATEのセットアップ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -376,15 +390,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ros-melodic" class="md-nav__link">
-    ROS Melodicのソースビルド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    環境変数の設定
+  <a href="#ros-noetic" class="md-nav__link">
+    ROS Noeticのインストール
   </a>
   
 </li>
@@ -419,20 +426,6 @@
   
 </nav>
       
-    </li>
-  
-
-            
-          
-            
-              
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../softwareSetupUbuntu/" class="md-nav__link">
-        Ubuntu MATE
-      </a>
     </li>
   
 
@@ -835,11 +828,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#raspberry-pi-os" class="md-nav__link">
-    Raspberry Pi OSのセットアップ
+  <a href="#ubuntu-mate" class="md-nav__link">
+    Ubuntu MATEのセットアップ
   </a>
   
-    <nav class="md-nav" aria-label="Raspberry Pi OSのセットアップ">
+    <nav class="md-nav" aria-label="Ubuntu MATEのセットアップ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -884,15 +877,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ros-melodic" class="md-nav__link">
-    ROS Melodicのソースビルド
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
-    環境変数の設定
+  <a href="#ros-noetic" class="md-nav__link">
+    ROS Noeticのインストール
   </a>
   
 </li>
@@ -936,65 +922,60 @@
               
                 
                 
-                <h1 id="-raspberry-pi-os-">ソフトウェアセットアップ -Raspberry Pi OS-</h1>
+                <h1 id="-ubuntu-mate-">ソフトウェアセットアップ -Ubuntu MATE-</h1>
 <p>ライトローバーを動作させせるためには、OSや各ライブラリのセットアップが必要です。<br />
 以下の手順で、ライトローバーを動作させるための環境を構築していきましょう。<br />
-なお本ページはRaspberry Pi OSを使用する場合の手順です。<br />
-Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetupUbuntu/">こちら</a>をご参照ください。</p>
+なお本ページはUbuntu MATEを使用する場合の手順です。<br />
+Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetup/">こちら</a>をご参照ください。</p>
 <h2 id="os">OSのセットアップと設定</h2>
-<p>OSのセットアップや、ライトローバーを動作させるために必要な設定などを行います。<br />
-動画も用意していますので、そちらもご参照ください。  </p>
-<h2 id="raspberry-pi-os">Raspberry Pi OSのセットアップ</h2>
-<ol>
-<li>
-<p>OSの書き込み</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/_8MTu8oMjGA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-</li>
-<li>
-<p>Raspberry Piの初期設定～VNCの設定</p>
-<p><iframe width="560" height="315" src="https://www.youtube.com/embed/JIxzjZ2jTmY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
-</li>
-</ol>
+<p>OSのセットアップや、ライトローバーを動作させるために必要な設定などを行います。  </p>
+<h2 id="ubuntu-mate">Ubuntu MATEのセットアップ</h2>
 <h3 id="os_1">OSの書込み</h3>
-<p>microSDカードにRaspberry Pi用のOS「Raspberry Pi OS」を書込みます。
-※2021年11月16日現在、OSのアップデートが行われた関係上、従来の手順ではROSのインストールができなくなることを確認しております。<br />
-　以下のリンクからBusterバージョンのimgファイルをダウンロードし、そちらをSDカードに書き込んでください。<br />
-<a href="https://downloads.raspberrypi.org/raspios_full_armhf/images/raspios_full_armhf-2021-05-28/">Raspberry Pi OS アーカイブページ</a></p>
+<p>microSDカードにRaspberry Piに対応したOS「Ubuntu MATE」を書込みます。</p>
 <ol>
-<li><a href="https://www.raspberrypi.org/software/">Raspberry Piのサイト</a>から、Raspberry Pi Imagerのインストーラーをダウンロードします。</li>
-<li>インストーラーを起動し、Raspberry Pi Imagerをインストールします。</li>
-<li>インストールしたRaspberry Pi Imagerを起動します。</li>
+<li><a href="https://ubuntu-mate.org/download/">Ubuntu MATEのサイト</a>から、Ubuntu MATE 20.04.3 LTS（Raspberry Pi 64-bit）のimgファイルをダウンロードします。</li>
+<li>イメージ書き込みソフト<a href="https://www.balena.io/etcher/">balenaEtcher</a>のインストーラーをダウンロードします。</li>
+<li>インストーラーを起動し、balenaEtcherをインストールします。</li>
 <li>microSDをカードリーダーを使ってPCに接続します。</li>
-<li><del>Raspberry Pi ImagerのCHOOSE OSの項目は、Raspberry Pi OS(32-bit)を選択します。</del><br />
-   <span style="color: red; ">Raspberry Pi ImagerのCHOOSE OSの項目は、Use customを選択し、ダウンロードしたimgファイルを選択します。</span></li>
-<li>CHOOSE SD CARDの項目は、OSを書き込みたいSDカードを選択します。</li>
-<li>WRITEでOSを書き込みます。</li>
+<li>balenaEtcherを起動します。</li>
+<li>balenaEtcherのFlash from fileから、先ほどダウンロードしたUbuntu MATEのimgファイルを選択します。</li>
+<li>Select targetの項目は、OSを書き込みたいSDカードを選択します。</li>
+<li>Flash!でOSを書き込みます。</li>
 </ol>
 <h3 id="raspberry-pi">Raspberry Piの初期設定</h3>
 <p>Raspberry Piを起動し、各種設定を行います。</p>
 <ol>
 <li>VS-WRC201の電源ボタンを押して、Raspberry Piを起動します。</li>
 <li>初期設定画面が表示されるので、以下の通りに設定します。<ol>
-<li>Set Country -&gt; Countryの項目でJapanを選択</li>
-<li>Change Password -&gt; 新しいパスワードを2回入力</li>
-<li>Select WiFi Network -&gt; 接続したいネットワークのSSIDを選択</li>
-<li>Enter WiFi Network -&gt; 選択したSSIDのパスワードを入力</li>
-<li>Update Software -&gt; Nextを選択</li>
-<li>Setup Complete -&gt; Restartを選択し、Raspberry Piを再起動する</li>
+<li>Welcome -&gt; 日本語を選択</li>
+<li>キーボードレイアウト -&gt; Japaneseを選択し、その中からJapanese (OADG 109A)を選択</li>
+<li>無線 -&gt; 「このネットワークに接続する」を選択し、接続したいネットワークのSSIDを選択</li>
+<li>Authentication required-&gt; 選択したSSIDのパスワードを入力</li>
+<li>どこに住んでいますか？ -&gt; Tokyoと入力</li>
+<li>あなたの情報を入力してください -&gt; ユーザー名、パスワード等を設定する</li>
 </ol>
 </li>
-<li>再起動が完了したら、画面左上のメニューから、設定-&gt;Raspberry Piの設定を選択します。</li>
-<li>タブからインターフェイスを選択し、I2Cの項目の有効にチェックを入れ、OKを選択します。</li>
+<li>しばらくすると再起動する。再起動が完了したら、パスワードを入力しログインする。</li>
+<li>画面左上のメニューから、システムツール-&gt;MATE端末を選択するか、キーボードの <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span> を押してターミナルを起動します。</li>
+<li>
+<p>以下のコマンドを実行してユーザーにi2cの実行権限を付与します。</p>
+<div class="highlight"><pre><span></span><code>sudo usermod -aG i2c ユーザー名
+</code></pre></div>
+</li>
+<li>
+<p>以下のコマンドを実行して再起動します。</p>
+<div class="highlight"><pre><span></span><code>sudo reboot
+</code></pre></div>
+</li>
 </ol>
 <h3 id="setuppy">setup.pyの実行</h3>
 <p>Raspberry Piの設定変更と必須ライブラリの導入を行います。<br />
 手動で作業を行うこともできますが、以下のPythonファイルをご使用いただくことで自動で行えます。</p>
-<p>次のリンクを右クリックし、「名前を付けてリンク先を保存」を選択して「ホームフォルダ」に保存してください。</p>
-<p><a href="../../dl_files/setup.py">setup.py</a></p>
+<p>次のリンクを右クリックし、「Save Link As ...」を選択して「ホームフォルダ」に保存してください。</p>
+<p><a href="../dl_files/ububtu_setup.py">ubuntu_setup.py</a></p>
 <p>〇setup.pyの実行方法  </p>
 <ol>
-<li>画面左上のメニューから、アクセサリ-&gt;LXTerminalを選択するか、キーボードの <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span> を押してターミナルを起動します。  </li>
-<li>ターミナルに次のように入力して、setup.pyを実行します。<div class="highlight"><pre><span></span><code>sudo python setup.py
+<li>ターミナルを起動して次のように入力し、ubuntu_setup.pyを実行します。<div class="highlight"><pre><span></span><code>sudo python3 ubuntu_setup.py
 </code></pre></div>
 </li>
 </ol>
@@ -1002,18 +983,73 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 <p>ライトローバーをネットワーク経由で他のPCから制御できるようにVNCを導入します。</p>
 <p>〇Raspberry Piの操作</p>
 <ol>
-<li>画面左上のメニューから、設定-&gt;Raspberry Piの設定を選択します。</li>
-<li>タブからインターフェイスを選択し、VNCの項目の有効にチェックを入れ、OKを選択します。</li>
-<li>画面左上のメニューから、アクセサリ-&gt;LXTerminalを選択するか、キーボードの <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span> を押してターミナルを起動します。</li>
 <li>
-<p>テキストエディタで/boot/config.txtを開きます。（例）nanoを使用する場合は以下のコマンドになります。</p>
-<div class="highlight"><pre><span></span><code>sudo nano /boot/config.txt
+<p>ターミナルを起動して以下のコマンドを入力し、ディスプレイマネージャーを変更します。</p>
+<div class="highlight"><pre><span></span><code>sudo apt install lightdm
 </code></pre></div>
 </li>
 <li>
-<p>#hdmi_force_hotplug=1の先頭にある#を消して上書き保存します。</p>
+<p>ターミナルに以下のコマンドを入力し、vncをインストールします。</p>
+<div class="highlight"><pre><span></span><code>sudo apt install x11vnc
+</code></pre></div>
 </li>
-<li>画面右上のアイコンからVNC Serverのウィンドウを開き、IPアドレスを確認します。</li>
+<li>
+<p>下記のコマンドでvncのパスワードを設定します。</p>
+<div class="highlight"><pre><span></span><code>sudo x11vnc -storepasswd /etc/.vncpasswd
+</code></pre></div>
+</li>
+<li>
+<p>テキストエディタで/etc/systemd/system/x11vnc.serviceを作製します。（例）nanoを使用する場合は以下のコマンドになります。</p>
+<div class="highlight"><pre><span></span><code>sudo nano /etc/systemd/system/x11vnc.service
+</code></pre></div>
+</li>
+<li>
+<p>以下の内容を書き込み、保存します。</p>
+<div class="highlight"><pre><span></span><code>[Unit]
+Description=x11vnc (Remote access)
+After=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/x11vnc -auth guess -display :0 -rfbauth /etc/.vncpasswd -rfbport 5900 -forever -loop -noxdamage -repeat -shared
+ExecStop=/bin/kill -TERM $MAINPID
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=control-group
+Restart=on-failure
+
+[Install]
+WantedBy=graphical.target
+</code></pre></div>
+</li>
+<li>
+<p>以下の3つのコマンドを実行します。</p>
+<div class="highlight"><pre><span></span><code>sudo systemctl daemon-reload
+sudo systemctl enable x11vnc
+sudo systemctl start x11vnc
+</code></pre></div>
+</li>
+<li>
+<p>テキストエディタで/boot/firmware/usercfg.txtを編集します。</p>
+<div class="highlight"><pre><span></span><code>sudo nano /boot/firmware/usercfg.txt
+</code></pre></div>
+</li>
+<li>
+<p>以下の内容を追記し、保存します。</p>
+<div class="highlight"><pre><span></span><code>hdmi_force_hotplug=1
+hdmi_group=2
+disable_overscan=1
+</code></pre></div>
+</li>
+<li>
+<p>一度電源を切り再起動します。</p>
+<div class="highlight"><pre><span></span><code>sudo poweroff
+</code></pre></div>
+</li>
+<li>
+<p>下記のコマンドでIPアドレスを確認します。</p>
+<div class="highlight"><pre><span></span><code>ip addr
+</code></pre></div>
+</li>
 </ol>
 <p>〇PCの操作</p>
 <ol>
@@ -1022,23 +1058,22 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 <li>インストーラーを起動し、VNC Viewerをインストールします。</li>
 <li>インストールしたVNC Viewerを起動します。</li>
 <li>ウィンドウの上部にある入力欄に、先ほど確認したライトローバーのIPアドレスを入力します。</li>
-<li>UsernameにPi、Passwordには初期設定で設定したパスワードを入力します。</li>
+<li>UsernameにUbuntuのユーザー名、PasswordにはVNCで設定したパスワードを入力します。</li>
 </ol>
 <h2 id="ros">ROSのセットアップ</h2>
-<h3 id="ros-melodic">ROS Melodicのソースビルド</h3>
-<p>ROS Melodicはソースファイルからビルドしてインストールすることができます。<br />
-時間も手間もかかりますが、様々なROSのツールに触れることができます。<br />
+<h3 id="ros-noetic">ROS Noeticのインストール</h3>
+<p>ROS Noeticをインストールします。<br />
 基本的には以下のサイトの説明に沿って進めて行きます。<br />
-<a href="http://wiki.ros.org/ROSberryPi/Installing%20ROS%20Melodic%20on%20the%20Raspberry%20Pi">ROS.org Installing ROS Melodic on the Raspberry Pi</a></p>
+<a href="http://wiki.ros.org/noetic/Installation/Ubuntu">ROS.org Ubuntu install of ROS Noetic</a></p>
 <ol>
 <li>
 <p>ROSリポジトリの設定<br />
-    ROSのリポジトリをソースリストに追加することで、ダウンロードできるようにします。<br />
+    ROSのリポジトリをソースリストに追加することで、インストールできるようにします。<br />
     ターミナルで次の2つのコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo sh -c &#39;echo &quot;deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main&quot; &gt; /etc/apt/sources.list.d/ros-latest.list&#39;
+<div class="highlight"><pre><span></span><code>echo &quot;deb http://packages.ros.org/ros/ubuntu focal main&quot; | sudo tee /etc/apt/sources.list.d/ros-focal.list
 </code></pre></div>
 <p><br></p>
-<div class="highlight"><pre><span></span><code>curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -
+<div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver &#39;hkp://keyserver.ubuntu.com:80&#39; --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
 </code></pre></div>
 <p>続いてインデックスをアップデートします。<br />
 次の2つのコマンドを実行してください。  </p>
@@ -1049,9 +1084,24 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 </code></pre></div>
 </li>
 <li>
+<p>ROS Noeticのインストール
+    以下のコマンドを実行してROS Noeticをインストールします。</p>
+<div class="highlight"><pre><span></span><code>sudo apt install ros-noetic-desktop-full
+</code></pre></div>
+</li>
+<li>
+<p>環境変数の設定
+    ターミナルからコマンドを呼び出して実行する際には、そのコマンドに対するパスが通っている必要があります。<br />
+    ターミナルを起動した際にROSへのパスが通るように設定を追加します。<br />
+    ターミナルを立ち上げて以下のコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>echo &quot;source /opt/ros/noetic/setup.bash&quot; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div>
+</li>
+<li>
 <p>依存ソフトウェアのインストール<br />
     ROSのビルドに必要なソフトウェアをインストールします。次のコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo apt install -y python-rosdep python-rosinstall-generator python-wstool python-rosinstall build-essential cmake
+<div class="highlight"><pre><span></span><code>sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
 </code></pre></div>
 </li>
 <li>
@@ -1063,56 +1113,8 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 <div class="highlight"><pre><span></span><code>rosdep update
 </code></pre></div>
 </li>
-<li>
-<p>ワークスペースの作成<br />
-    ROSをビルドするためのワークスペースを作成します。<br />
-    次のコマンドでフォルダを作りましょう。  </p>
-<div class="highlight"><pre><span></span><code>mkdir -p ~/ros_catkin_ws
-</code></pre></div>
-<p>続いて、作成したフォルダに移動します。  </p>
-<div class="highlight"><pre><span></span><code>cd ~/ros_catkin_ws
-</code></pre></div>
-<p>移動したら、以下のコマンドを使用してビルドするROSの構成を指定します。<br />
-ここでは、GUIツールなども含まれたdesktopを使用します。  </p>
-<div class="highlight"><pre><span></span><code>rosinstall_generator desktop --rosdistro melodic --deps --wet-only --tar &gt; melodic-desktop-wet.rosinstall
-</code></pre></div>
-<p>バージョン管理ツールのwstoolを用いてワークスペースを初期化します。  </p>
-<div class="highlight"><pre><span></span><code>wstool init src melodic-desktop-wet.rosinstall
-</code></pre></div>
-</li>
-<li>
-<p>依存関係の解決
-    rosdepを使って、依存関係を確認、解決します。<br />
-    念の為、先ほどワークスペースに再度移動しておきます。  </p>
-<div class="highlight"><pre><span></span><code>cd ~/ros_catkin_ws
-</code></pre></div>
-<p>rosdepで依存関係を解決し、必要なファイルを取得します。  </p>
-<div class="highlight"><pre><span></span><code>rosdep install -y --from-paths src --ignore-src --rosdistro melodic -r --os=debian:buster
-</code></pre></div>
-<p>ネットワークの状況にもよりますが、20～30分程度時間がかかります。  </p>
-</li>
-<li>
-<p>ビルド
-    次のコマンドでROS Melodicをビルドしましょう。  </p>
-<div class="highlight"><pre><span></span><code>sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic
-</code></pre></div>
-<p>ビルドには時間がかかります。<br />
-電源が不安定な場合など、ビルドが途中で失敗することがあります。<br />
-その場合は次のコマンドを使用してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo ./src/catkin/bin/catkin_make_isolated --install -DCMAKE_BUILD_TYPE=Release --install-space /opt/ros/melodic -j2
-</code></pre></div>
-<p>新たに-j2オプションを追加しています。<br />
--j2オプションは、ビルドに使用するCPUのコア数を制限するオプションです。  </p>
-<p>ビルドが完了すると、ROSは/opt/ros/melodicにインストールされます。</p>
-</li>
 </ol>
 <p>以上で、ROS Melodicのインストールは完了です。</p>
-<h3 id="_1">環境変数の設定</h3>
-<p>ターミナルからコマンドを呼び出して実行する際には、そのコマンドに対するパスが通っている必要があります。<br />
-ターミナルを起動した際にROSへのパスが通るように設定を追加します。<br />
-ターミナルを立ち上げて以下のコマンドを実行してください。  </p>
-<pre><code>echo &quot;source /opt/ros/melodic/setup.bash&quot; &gt;&gt; ~/.bashrc
-</code></pre>
 <h3 id="catkin">catkinワークスペースの作成</h3>
 <p>その他のパッケージのインストール用に新たにcatkinワークスペースを作成しましょう。<br />
 catkinはROS1のビルドシステムです。<br />
@@ -1121,10 +1123,10 @@ ROS Wikiのチュートリアルではcatkin_makeコマンドによるビルド�
 catkin buildはcatkin_makeの後継として作られたコマンドで、catkin_makeで使い辛かった点などが改善されています。<br />
 <br>
 以下のコマンドをターミナルで実行し、catkin buikdをインストールします。  </p>
-<pre><code>sudo apt install python-catkin-tools
+<pre><code>sudo apt install python3-osrf-pycommon python3-catkin-tools
 </code></pre>
 <p>setup.bashを実行します。  </p>
-<pre><code>source /opt/ros/melodic/setup.bash
+<pre><code>source /opt/ros/noetic/setup.bash
 </code></pre>
 <p>次のコマンドでワークスペースとなるフォルダを作成してください。  </p>
 <pre><code>mkdir -p ~/catkin_ws/src
@@ -1149,7 +1151,7 @@ catkin buildを実行します。  </p>
 <pre><code>cd ~/catkin_ws/src
 </code></pre>
 <p>次のコマンドで、Githubからlightrover_rosパッケージのソースをクローンします。</p>
-<pre><code>git clone https://github.com/vstoneofficial/lightrover_ros.git
+<pre><code>git clone -b noetic https://github.com/vstoneofficial/lightrover_ros.git
 </code></pre>
 <p>catkin buildします。</p>
 <pre><code>catkin build
@@ -1211,7 +1213,7 @@ YDLiDARのセットアップは完了です。</p>
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../hardwareSetup/" class="md-footer__link md-footer__link--prev" aria-label="前: ハードウェアセットアップ" rel="prev">
+        <a href="../softwareSetup/" class="md-footer__link md-footer__link--prev" aria-label="前: Raspberry Pi OS" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -1220,20 +1222,20 @@ YDLiDARのセットアップは完了です。</p>
               <span class="md-footer__direction">
                 前
               </span>
-              ハードウェアセットアップ
+              Raspberry Pi OS
             </div>
           </div>
         </a>
       
       
         
-        <a href="../softwareSetupUbuntu/" class="md-footer__link md-footer__link--next" aria-label="次: Ubuntu MATE" rel="next">
+        <a href="../../software/aboutROS/" class="md-footer__link md-footer__link--next" aria-label="次: ROSとは" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 次
               </span>
-              Ubuntu MATE
+              ROSとは
             </div>
           </div>
           <div class="md-footer__button md-icon">
