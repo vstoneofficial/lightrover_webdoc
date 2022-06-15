@@ -878,6 +878,7 @@
 <p>ライトローバーに市販のゲームパッドを接続して走行させてみましょう。</p>
 <h2 id="_2">使用できるゲームパッドについて</h2>
 <p>アナログスティック入力機能を有するUSB接続のもの、またはPS4のコントローラ（DualShock®4）を、お客様にてご用意ください。ゲームパッドの種類によっては、デバイスドライバが非対応で動作しない可能性もございます。</p>
+<p><a id=ds4how></a></p>
 <h2 id="dualshock4">DualShock®4の無線接続</h2>
 <p>DualShock®4（以下DS4）をBluetooth接続で使用される場合は、以下の方法でセットアップおよび接続を行ってください。USBで接続される場合はこの手順は不要です。<br />
 <br></p>
@@ -886,10 +887,13 @@
 <p>ds4drvのインストール<br />
    DS4とRaspberry PiをペアリングするためのPythonドライバ<a href="https://github.com/chrippa/ds4drv">ds4drv</a>をpipでインストールします。<br />
    ターミナルを立ち上げ以下のコマンドを入力してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo pip install ds4drv
+<div class="highlight"><pre><span></span><code>sudo pip3 install ds4drv
 </code></pre></div>
 <p>一度インストールを行えば、次回からは以降の手順だけを行うだけで使用できます。<br />
-   <br></p>
+   続いて、以下のコマンドで依存パッケージをアップデートしてください。  </p>
+<div class="highlight"><pre><span></span><code>sudo pip3 install -U six
+</code></pre></div>
+<p><br></p>
 </li>
 <li>
 <p>ds4drvの起動とペアリング<br />
@@ -904,10 +908,13 @@
    ライトが点滅したらペアリングモードになっていますので、ボタンから指を離してください。<br />
    <br>
    ds4drvを起動したターミナルを確認し、以下のような表示になっていれば、接続完了です。  </p>
-<div class="highlight"><pre><span></span><code>[info][bluetooth] Found device xx:xx:xx:xx:xx:xx  
+<div class="highlight"><pre><span></span><code>[info][controller 1] Created devices /dev/input/js0 (joystick) /dev/input/event1 (evdev)
+[info][bluetooth] Scanning for devices
+[info][bluetooth] Found device xx:xx:xx:xx:xx:xx  
 [info][controller 1] Connected to Bluetooth Controller (xx:xx:xx:xx:xx:xx)
 </code></pre></div>
-<p>ds4drvは引き続き起動し続けてください。  </p>
+<p>このとき、1行目のCreated devicesの後に表示されている「/dev/input/js0」が接続されたDS4のデバイスファイルパスになります。状況によっては「/dev/input/js1」など名前が異なります。このデバイスフィアルパスは後に使用しますので控えておいてください。<br />
+   ds4drvは引き続き起動し続けてください。  </p>
 </li>
 </ol>
 <h2 id="joy">Joyパッケージのセットアップ</h2>
@@ -929,13 +936,14 @@
 </code></pre>
 <p>セットアップは以上で完了です。  </p>
 <h2 id="_3">ゲームパッドの接続とデバイスファイルパスの確認</h2>
-<p>Raspberry Piにゲームパッドを接続しない状態で、ターミナルで以下のコマンドを入力してください。</p>
+<p>DS4を使用される場合は<a href="#ds4how">上記の手順</a>で接続し、デバイスファイルパスを確認してください。<br />
+それ以外のゲームパッドをお使いの場合はRaspberry Piにゲームパッドを接続しない状態で、ターミナルで以下のコマンドを入力してください。</p>
 <pre><code>ls /dev/input
 </code></pre>
 <p>入力デバイスとして認識されていものが一覧で表示されます。<br />
 ※表示内容は環境によって変わります。
 <img alt="image" src="../../img/ls_dev_input_1.png" />  </p>
-<p>Raspberry PiにUSBでゲームパッドを接続するか、DS4をbluetoothで接続してください。<br />
+<p>Raspberry PiにUSB等でゲームパッドを接続してください。<br />
 ターミナルで再び以下のコマンドを入力します。</p>
 <pre><code>ls /dev/input
 </code></pre>
