@@ -14,7 +14,7 @@
     
     
       
-        <title>商標について - ライトローバーWebDoc</title>
+        <title>メモリマップ表 - ライトローバーWebDoc</title>
       
     
     
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              商標について
+              メモリマップ表
             
           </span>
         </div>
@@ -707,12 +707,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -735,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tips/adjustMParam/" class="md-nav__link">
+      <a href="../adjustMParam/" class="md-nav__link">
         モータパラメータの設定
       </a>
     </li>
@@ -747,11 +749,21 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Tips/memMap/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         メモリマップ表
       </a>
+      
     </li>
   
 
@@ -763,7 +775,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tips/clone/" class="md-nav__link">
+      <a href="../clone/" class="md-nav__link">
         microSDカードのクローン
       </a>
     </li>
@@ -783,21 +795,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FAQ/trademark/" class="md-nav__link">
         商標について
       </a>
-      
     </li>
   
 
@@ -834,13 +836,403 @@
               
                 
                 
-                <h1 id="_1">商標について</h1>
-<p>Bluetooth®はBluetooth SIG, Inc. USAの登録商標または商標です。<br />
-microSDロゴ、microSDは、SD-3C LLCの登録商標または商標です。<br />
-Raspberry PiはRaspberry Pi財団の登録商標または商標です。<br />
-ROSはOpen Source Robotics Foundation, Inc.によるオープンソースのプロジェクトです。<br />
-Wi-FiはWi-Fi Allianceの登録商標です。<br />
-その他、記載されている製品名などの固有名詞は、一般に各社の登録商標または商標です。  </p>
+                <h1 id="_1">メモリマップ一覧表</h1>
+<p>ライトローバーのメモリマップは以下の表の通りです。<br />
+パラメータを変更してモータをスムーズに回転させるようにする方法を解説します。<br />
+<br></p>
+<table>
+<thead>
+<tr>
+<th align="left">アドレス <br> (複数の場合は先頭)</th>
+<th align="left">用途</th>
+<th align="left">名前</th>
+<th align="left">サイズ（Byte）</th>
+<th align="left">R/W</th>
+<th align="left">初期値</th>
+<th align="left">コメント</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">0x00</td>
+<td align="left">システム名</td>
+<td align="left">MU16_SYSNAME</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x21</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x02</td>
+<td align="left">ファームウェアリビジョン</td>
+<td align="left">MU16_FIRMREV</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x07</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x04</td>
+<td align="left">経過時間(ms)</td>
+<td align="left">MU32_TRIPTIME</td>
+<td align="left">4</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x08</td>
+<td align="left">ウォッチドッグタイマー</td>
+<td align="left">MU16_WDT</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x00</td>
+<td align="left">0x0000で何もしない<br>0xffffでモータ停止<br>それ以外でカウントダウン[ms]</td>
+</tr>
+<tr>
+<td align="left">0x0d</td>
+<td align="left">ジャンパ</td>
+<td align="left">MU8_MODE</td>
+<td align="left">1</td>
+<td align="left">R</td>
+<td align="left">0x00</td>
+<td align="left">b3-0:起動時に認識したジャンパの値</td>
+</tr>
+<tr>
+<td align="left">0x0e</td>
+<td align="left">電源OFF</td>
+<td align="left">MU16_POWOFF_T</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x00</td>
+<td align="left">msec後に電源が切れる</td>
+</tr>
+<tr>
+<td align="left">0x10</td>
+<td align="left">モータEnable</td>
+<td align="left">MU8_O_EN</td>
+<td align="left">1</td>
+<td align="left">R/W</td>
+<td align="left">0x00</td>
+<td align="left">b0: 1でCH0出力Enable. 0でDisable<br>b1: 1でCH1出力Enable. 0でDisable</td>
+</tr>
+<tr>
+<td align="left">0x11</td>
+<td align="left">モータトリガ</td>
+<td align="left">MU8_TRIG</td>
+<td align="left">1</td>
+<td align="left">R/W</td>
+<td align="left">0x00</td>
+<td align="left">b0: 1でA_POS0をT_POS0に加算<br>b1: 1でA_POS1をT_POS1に加算<br>b2: 1でM_POS0とT_POS0をクリア<br>b3: 1でM_POS1とT_POS1をクリア</td>
+</tr>
+<tr>
+<td align="left">0x12</td>
+<td align="left">シャットダウン電圧</td>
+<td align="left">MU16_SD_VI</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x044F</td>
+<td align="left">電圧と数値の関係式: 29.7V = 0x0FFF</td>
+</tr>
+<tr>
+<td align="left">0x14</td>
+<td align="left">DIによる動作停止設定</td>
+<td align="left">MU16_OD_DI</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x01FF</td>
+<td align="left">対応するM_DIが1ならMU8_O_EN=0になる</td>
+</tr>
+<tr>
+<td align="left">0x16</td>
+<td align="left">速度計算の基準時間(ms)</td>
+<td align="left">MU16_SPD_T0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0064</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x18</td>
+<td align="left">加算時間</td>
+<td align="left">MU16_MOVE_TO</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x20</td>
+<td align="left">比例ゲイン</td>
+<td align="left">MU16_FB_PG0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0100</td>
+<td align="left">位置制御時のモータ0比例ゲイン</td>
+</tr>
+<tr>
+<td align="left">0x22</td>
+<td align="left">^</td>
+<td align="left">MU16_FB_PG1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0100</td>
+<td align="left">位置制御時のモータ1比例ゲイン</td>
+</tr>
+<tr>
+<td align="left">0x24</td>
+<td align="left">加速度上限</td>
+<td align="left">MU16_FB_ALIM0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0010</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x26</td>
+<td align="left">^</td>
+<td align="left">MU16_FB_ALIM1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0010</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x28</td>
+<td align="left">加速度上限</td>
+<td align="left">MU16_FB_DLIM0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0040</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x2a</td>
+<td align="left">^</td>
+<td align="left">MU16_FB_DLIM1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0040</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x2c</td>
+<td align="left">出力上限</td>
+<td align="left">MU16_FB_OLIM0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0100</td>
+<td align="left">100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x2e</td>
+<td align="left">^</td>
+<td align="left">MU16_FB_OLIM1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0100</td>
+<td align="left">100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x30</td>
+<td align="left">パンチ</td>
+<td align="left">MU16_FB_PCH0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0000</td>
+<td align="left">位置制御時のモータ0のパンチ<br>100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x32</td>
+<td align="left">^</td>
+<td align="left">MU16_FB_PCH1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0000</td>
+<td align="left">位置制御時のモータ0のパンチ<br>100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x34</td>
+<td align="left">予約</td>
+<td align="left">-</td>
+<td align="left">12</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">システム予約済み</td>
+</tr>
+<tr>
+<td align="left">0x40</td>
+<td align="left">エンコーダ目標位置</td>
+<td align="left">MS32_T_POS0</td>
+<td align="left">4</td>
+<td align="left">R/W</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x44</td>
+<td align="left">^</td>
+<td align="left">MS32_T_POS1</td>
+<td align="left">4</td>
+<td align="left">R/W</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x48</td>
+<td align="left">T_POSへの加算値</td>
+<td align="left">MS32_A_POS0</td>
+<td align="left">4</td>
+<td align="left">R/W</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x4c</td>
+<td align="left">^</td>
+<td align="left">MS32_A_POS1</td>
+<td align="left">4</td>
+<td align="left">R/W</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x4e</td>
+<td align="left">予約</td>
+<td align="left">-</td>
+<td align="left">2</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">システム予約済み</td>
+</tr>
+<tr>
+<td align="left">0x50</td>
+<td align="left">出力オフセット</td>
+<td align="left">MS16_T_OUT0</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x52</td>
+<td align="left">^</td>
+<td align="left">MS16_T_OUT1</td>
+<td align="left">2</td>
+<td align="left">R/W</td>
+<td align="left">0x0000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x54</td>
+<td align="left">予約</td>
+<td align="left">-</td>
+<td align="left">12</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">システム予約済み</td>
+</tr>
+<tr>
+<td align="left">0x60</td>
+<td align="left">測定されたエンコーダ値</td>
+<td align="left">MS32_M_POS0</td>
+<td align="left">4</td>
+<td align="left">R</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x64</td>
+<td align="left">^</td>
+<td align="left">MS32_M_POS0</td>
+<td align="left">4</td>
+<td align="left">R</td>
+<td align="left">0x00000000</td>
+<td align="left"></td>
+</tr>
+<tr>
+<td align="left">0x68</td>
+<td align="left">測定された速度</td>
+<td align="left">MS16_M_SPD0</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">前回と今回のM_POS0の差分</td>
+</tr>
+<tr>
+<td align="left">0x6a</td>
+<td align="left">^</td>
+<td align="left">MS16_M_SPD1</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">前回と今回のM_POS1の差分</td>
+</tr>
+<tr>
+<td align="left">0x6c</td>
+<td align="left">計算されたモータ出力値</td>
+<td align="left">MS16_M_OUT0</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x6e</td>
+<td align="left">^</td>
+<td align="left">MS16_M_OUT1</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">100%が0x1000</td>
+</tr>
+<tr>
+<td align="left">0x70</td>
+<td align="left">予約</td>
+<td align="left">-</td>
+<td align="left">14</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">システム予約済み</td>
+</tr>
+<tr>
+<td align="left">0x7e</td>
+<td align="left">デジタル入力</td>
+<td align="left">MU16_M_DI</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">b0-7:CN5, b8:PWR-BTN</td>
+</tr>
+<tr>
+<td align="left">0x80</td>
+<td align="left">予約</td>
+<td align="left">-</td>
+<td align="left">16</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">システム予約済み</td>
+</tr>
+<tr>
+<td align="left">0x90</td>
+<td align="left">バッテリー電圧</td>
+<td align="left">MU16_M_VI</td>
+<td align="left">2</td>
+<td align="left">R</td>
+<td align="left">0x0000</td>
+<td align="left">電圧と数値の関係式: 29.7V = 0x0FFF</td>
+</tr>
+<tr>
+<td align="left">0xa0</td>
+<td align="left">ユーザー領域</td>
+<td align="left">-</td>
+<td align="left">96</td>
+<td align="left">-</td>
+<td align="left">-</td>
+<td align="left">ユーザーが自由に使用可能な領域</td>
+</tr>
+</tbody>
+</table>
                 
               
               
@@ -860,7 +1252,7 @@ Wi-FiはWi-Fi Allianceの登録商標です。<br />
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../../Tips/clone/" class="md-footer__link md-footer__link--prev" aria-label="前: microSDカードのクローン" rel="prev">
+        <a href="../adjustMParam/" class="md-footer__link md-footer__link--prev" aria-label="前: モータパラメータの設定" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -869,11 +1261,26 @@ Wi-FiはWi-Fi Allianceの登録商標です。<br />
               <span class="md-footer__direction">
                 前
               </span>
-              microSDカードのクローン
+              モータパラメータの設定
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../clone/" class="md-footer__link md-footer__link--next" aria-label="次: microSDカードのクローン" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              microSDカードのクローン
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

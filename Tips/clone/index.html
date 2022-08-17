@@ -14,7 +14,7 @@
     
     
       
-        <title>商標について - ライトローバーWebDoc</title>
+        <title>microSDカードのクローン - ライトローバーWebDoc</title>
       
     
     
@@ -69,7 +69,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#microsd" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              商標について
+              microSDカードのクローン
             
           </span>
         </div>
@@ -707,12 +707,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_6" type="checkbox" id="__nav_6" checked>
       
       
       
@@ -735,7 +737,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tips/adjustMParam/" class="md-nav__link">
+      <a href="../adjustMParam/" class="md-nav__link">
         モータパラメータの設定
       </a>
     </li>
@@ -749,7 +751,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../Tips/memMap/" class="md-nav__link">
+      <a href="../memMap/" class="md-nav__link">
         メモリマップ表
       </a>
     </li>
@@ -761,11 +763,60 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../Tips/clone/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          microSDカードのクローン
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         microSDカードのクローン
       </a>
+      
+        
+
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#img" class="md-nav__link">
+    imgファイルの作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#img_1" class="md-nav__link">
+    生成したimgファイルの書き込み
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -783,21 +834,11 @@
 
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../FAQ/trademark/" class="md-nav__link">
         商標について
       </a>
-      
     </li>
   
 
@@ -823,6 +864,28 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#img" class="md-nav__link">
+    imgファイルの作成
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#img_1" class="md-nav__link">
+    生成したimgファイルの書き込み
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -834,13 +897,37 @@
               
                 
                 
-                <h1 id="_1">商標について</h1>
-<p>Bluetooth®はBluetooth SIG, Inc. USAの登録商標または商標です。<br />
-microSDロゴ、microSDは、SD-3C LLCの登録商標または商標です。<br />
-Raspberry PiはRaspberry Pi財団の登録商標または商標です。<br />
-ROSはOpen Source Robotics Foundation, Inc.によるオープンソースのプロジェクトです。<br />
-Wi-FiはWi-Fi Allianceの登録商標です。<br />
-その他、記載されている製品名などの固有名詞は、一般に各社の登録商標または商標です。  </p>
+                <h1 id="microsd">microSDカードのクローン</h1>
+<p>一度ライトローバーのためにセットアップしたmicroSDカードは、<br />
+バックアップや他の機体へ流用するためにimgファイルとしてクローンすることが可能です。<br />
+microSDカードのクローン方法を解説します。</p>
+<h2 id="img">imgファイルの作成</h2>
+<p>セットアップ済みのmicroSDカードからimgファイルを作製します。</p>
+<ol>
+<li><a href="https://sourceforge.net/projects/win32diskimager/">Win32 Disk Imager</a>のインストーラーをダウンロードします。</li>
+<li>インストーラーを起動し、Win32 Disk Imagerをインストールします。</li>
+<li>セットアップ済みのmicroSDをカードリーダーを使ってPCに接続します。</li>
+<li>Win32 Disk Imagerを起動します。</li>
+<li>Win32 Disk ImagerImgae fileに、保存先と保存したい名前を入力します。<br />
+   この時、ファイルの拡張子は.imgとします。例：backup.img<br />
+   入力欄右側のフォルダアイコンを使用するとエクスプローラーを利用して保存先、<br />
+   ファイル名を指定することができます。</li>
+<li>DeviceにPCに接続したmicroSDのドライブを指定します。</li>
+<li>HashはNoneを指定します。</li>
+<li>Readをクリックすると、クローンが始まりimgファイルが生成されます。</li>
+</ol>
+<h2 id="img_1">生成したimgファイルの書き込み</h2>
+<p>生成したimgファイルを別のmicroSDカードに書き込みます。</p>
+<ol>
+<li>microSDをカードリーダーを使ってPCに接続します。<br />
+   この時、microSDの容量はimgファイルよりも大きいものを使用してください。</li>
+<li>balenaEtcherを起動します。
+   balenaEtcherをインストールしていない場合は、<br />
+<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetupUbuntu/">ソフトウェアセットアップ-Ubuntu Mate-</a>を参照してください。</li>
+<li>balenaEtcherのFlash from fileから、先ほど生成したimgファイルを選択します。</li>
+<li>Select targetの項目は、OSを書き込みたいSDカードを選択します。</li>
+<li>Flash!でOSを書き込みます。</li>
+</ol>
                 
               
               
@@ -860,7 +947,7 @@ Wi-FiはWi-Fi Allianceの登録商標です。<br />
     <nav class="md-footer__inner md-grid" aria-label="フッター">
       
         
-        <a href="../../Tips/clone/" class="md-footer__link md-footer__link--prev" aria-label="前: microSDカードのクローン" rel="prev">
+        <a href="../memMap/" class="md-footer__link md-footer__link--prev" aria-label="前: メモリマップ表" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -869,11 +956,26 @@ Wi-FiはWi-Fi Allianceの登録商標です。<br />
               <span class="md-footer__direction">
                 前
               </span>
-              microSDカードのクローン
+              メモリマップ表
             </div>
           </div>
         </a>
       
+      
+        
+        <a href="../../FAQ/trademark/" class="md-footer__link md-footer__link--next" aria-label="次: 商標について" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                次
+              </span>
+              商標について
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
