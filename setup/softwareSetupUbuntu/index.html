@@ -1060,10 +1060,14 @@ Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io
 <h3 id="os_1">OSの書込み</h3>
 <p>microSDカードにRaspberry Piに対応したOS「Ubuntu MATE」を書込みます。</p>
 <ol>
-<li><del><a href="https://ubuntu-mate.org/download/">Ubuntu MATEのサイト</a>から、Ubuntu MATE 20.04.3 LTS（Raspberry Pi 64-bit）のimgファイルをダウンロードします。</del><br />
-   <span style="color: red; ">OSのアップデートが行われた関係上、上記サイトからでは20.04のimgファイルがダウンロードできなくなっております。<br />
+<li><del><a href="https://ubuntu-mate.org/download/">Ubuntu MATEのサイト</a>から、Ubuntu MATE 20.04.3 LTS（Raspberry Pi 64-bit）のimgファイルをダウンロードします。<br />
+   OSのアップデートが行われた関係上、上記サイトからでは20.04のimgファイルがダウンロードできなくなっております。<br />
 　以下のリンクから「ubuntu-mate-20.04.1-desktop-arm64+raspi.img.xz」をダウンロードし、そちらをSDカードに書き込んでください。<br />
-<a href="https://releases.ubuntu-mate.org/20.04/arm64/">Ubuntu MATE 20.04 アーカイブページ</a></span></li>
+<a href="https://releases.ubuntu-mate.org/20.04/arm64/">Ubuntu MATE 20.04 アーカイブページ</a></del><br />
+  <span style="color: red; ">Raspberry Piの基板が更新されたことで、従来のimgファイルではOSが起動しません。<br />
+  更新済みのimgファイルを用意していますので、こちらをご利用ください。<br />
+<a href="https://www.vstone.co.jp/products/lightrover/download/ubuntu_mate_for_lightrover_20220912.img">ライトローバー用Ubuntu MATE 20.04</a>
+  </span>  </li>
 <li>イメージ書き込みソフト<a href="https://www.balena.io/etcher/">balenaEtcher</a>のインストーラーをダウンロードします。</li>
 <li>インストーラーを起動し、balenaEtcherをインストールします。</li>
 <li>microSDをカードリーダーを使ってPCに接続します。</li>
@@ -1073,16 +1077,20 @@ Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io
 <li>Flash!でOSを書き込みます。</li>
 </ol>
 <h3 id="raspberry-pi">Raspberry Piの初期設定</h3>
-<p>Raspberry Piを起動し、各種設定を行います。</p>
+<p>Raspberry Piを起動し、各種設定を行います。<br />
+<span style="color: red; ">現在Vstoneにて配布しているimgファイルは、2の初期設定をすでに行っております。<br />
+ユーザー名とパスワードは以下の通りです。<br />
+  ユーザー名 : pi<br />
+  パスワード : raspberry</span>  </p>
 <ol>
 <li>VS-WRC201の電源ボタンを押して、Raspberry Piを起動します。</li>
-<li>初期設定画面が表示されるので、以下の通りに設定します。<ol>
+<li><del>初期設定画面が表示されるので、以下の通りに設定します。<ol>
 <li>Welcome -&gt; 日本語を選択</li>
 <li>キーボードレイアウト -&gt; Japaneseを選択し、その中からJapanese (OADG 109A)を選択</li>
 <li>無線 -&gt; 「このネットワークに接続する」を選択し、接続したいネットワークのSSIDを選択</li>
 <li>Authentication required-&gt; 選択したSSIDのパスワードを入力</li>
 <li>どこに住んでいますか？ -&gt; Tokyoと入力</li>
-<li>あなたの情報を入力してください -&gt; ユーザー名、パスワード等を設定する</li>
+<li>あなたの情報を入力してください -&gt; ユーザー名、パスワード等を設定する</del>  </li>
 </ol>
 </li>
 <li>しばらくすると再起動する。再起動が完了したら、パスワードを入力しログインする。</li>
