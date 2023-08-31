@@ -9,10 +9,10 @@
       
       
       
-        <link rel="prev" href="../softwareSetup/">
+        <link rel="prev" href="../softwareSetupUbuntu/">
       
       
-        <link rel="next" href="../softwareSetupUbuntuRos2/">
+        <link rel="next" href="../../software/aboutROS/">
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
@@ -20,7 +20,7 @@
     
     
       
-        <title>Ubuntu MATE - ライトローバーWebDoc</title>
+        <title>Ubuntu MATE(ROS2) - ライトローバーWebDoc</title>
       
     
     
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ubuntu MATE
+              Ubuntu MATE(ROS2)
             
           </span>
         </div>
@@ -351,6 +351,26 @@
                 
   
   
+  
+    <li class="md-nav__item">
+      <a href="../softwareSetupUbuntu/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ubuntu MATE
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
     
   
   
@@ -366,7 +386,7 @@
           
   
   <span class="md-ellipsis">
-    Ubuntu MATE
+    Ubuntu MATE(ROS2)
   </span>
   
 
@@ -377,7 +397,7 @@
         
   
   <span class="md-ellipsis">
-    Ubuntu MATE
+    Ubuntu MATE(ROS2)
   </span>
   
 
@@ -447,30 +467,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ros" class="md-nav__link">
-    ROSのセットアップ
+  <a href="#ros2" class="md-nav__link">
+    ROS2のセットアップ
   </a>
   
-    <nav class="md-nav" aria-label="ROSのセットアップ">
+    <nav class="md-nav" aria-label="ROS2のセットアップ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ros-noetic" class="md-nav__link">
-    ROS Noeticのインストール
+  <a href="#ros2-humble" class="md-nav__link">
+    ROS2 Humbleのインストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#catkin" class="md-nav__link">
-    catkinワークスペースの作成
+  <a href="#_1" class="md-nav__link">
+    ワークスペースの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lightrover_ros" class="md-nav__link">
-    lightrover_rosパッケージのインストール
+  <a href="#lightrover_ros2" class="md-nav__link">
+    lightrover_ros2パッケージのインストール
   </a>
   
 </li>
@@ -491,26 +511,6 @@
   
 </nav>
       
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../softwareSetupUbuntuRos2/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Ubuntu MATE(ROS2)
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -1378,30 +1378,30 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ros" class="md-nav__link">
-    ROSのセットアップ
+  <a href="#ros2" class="md-nav__link">
+    ROS2のセットアップ
   </a>
   
-    <nav class="md-nav" aria-label="ROSのセットアップ">
+    <nav class="md-nav" aria-label="ROS2のセットアップ">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#ros-noetic" class="md-nav__link">
-    ROS Noeticのインストール
+  <a href="#ros2-humble" class="md-nav__link">
+    ROS2 Humbleのインストール
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#catkin" class="md-nav__link">
-    catkinワークスペースの作成
+  <a href="#_1" class="md-nav__link">
+    ワークスペースの作成
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lightrover_ros" class="md-nav__link">
-    lightrover_rosパッケージのインストール
+  <a href="#lightrover_ros2" class="md-nav__link">
+    lightrover_ros2パッケージのインストール
   </a>
   
 </li>
@@ -1436,21 +1436,19 @@
 <h1 id="-ubuntu-mate-">ソフトウェアセットアップ -Ubuntu MATE-</h1>
 <p>ライトローバーを動作させせるためには、OSや各ライブラリのセットアップが必要です。<br />
 以下の手順で、ライトローバーを動作させるための環境を構築していきましょう。<br />
-なお本ページはUbuntu MATEを使用する場合の手順です。<br />
-Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetup/">こちら</a>をご参照ください。</p>
+なお本ページはROS2をUbuntu MATEで使用する場合の手順です。<br />
+ROS1については、Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetup/">こちら</a>、<br />
+Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetupUbuntu/">こちら</a>をご参照ください。</p>
 <h2 id="os">OSのセットアップと設定</h2>
-<p>OSのセットアップや、ライトローバーを動作させるために必要な設定などを行います。  </p>
+<p>OSのセットアップや、ライトローバーを動作させるために必要な設定などを行います。<br />
+<span style="color: red; ">なおライトローバーでROS2を動作せる場合、消費電力の関係上、電源はRaspberry PiのUSB Type-Cポートに接続することを強く推奨します。<br />
+バッテリーを使用する場合も、micro B to USB Type-Cの変換コネクタなどを使用するなどでRapberry Piの電源ポートを使用することで動作が安定します。  </p>
 <h2 id="ubuntu-mate">Ubuntu MATEのセットアップ</h2>
 <h3 id="os_1">OSの書込み</h3>
 <p>microSDカードにRaspberry Piに対応したOS「Ubuntu MATE」を書込みます。</p>
 <ol>
-<li><del><a href="https://ubuntu-mate.org/download/">Ubuntu MATEのサイト</a>から、Ubuntu MATE 20.04.3 LTS（Raspberry Pi 64-bit）のimgファイルをダウンロードします。<br />
-   OSのアップデートが行われた関係上、上記サイトからでは20.04のimgファイルがダウンロードできなくなっております。<br />
-　以下のリンクから「ubuntu-mate-20.04.1-desktop-arm64+raspi.img.xz」をダウンロードし、そちらをSDカードに書き込んでください。<br />
-<a href="https://releases.ubuntu-mate.org/20.04/arm64/">Ubuntu MATE 20.04 アーカイブページ</a></del><br />
-  <span style="color: red; ">Raspberry Piの基板が更新されたことで、従来のimgファイルではOSが起動しません。<br />
-  更新済みのimgファイルを用意していますので、こちらをご利用ください。<br />
-<a href="https://www.vstone.co.jp/products/lightrover/download/ubuntu_mate_for_lightrover_20220912.img">ライトローバー用Ubuntu MATE 20.04</a>
+<li>以下のリンクからライトローバー用のUbuntu MATE 22.04 imgファイルをダウンロードしてください。<br />
+<a href="https://www.vstone.co.jp/products/lightrover/download/ubuntu_mate_for_lightrover_20230830.img">ライトローバー用Ubuntu MATE 22.04</a>
   </span>  </li>
 <li>イメージ書き込みソフト<a href="https://www.balena.io/etcher/">balenaEtcher</a>のインストーラーをダウンロードします。</li>
 <li>インストーラーを起動し、balenaEtcherをインストールします。</li>
@@ -1478,26 +1476,18 @@ Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io
 </ol>
 </li>
 <li>しばらくすると再起動する。再起動が完了したら、パスワードを入力しログインする。</li>
-<li>画面左上のメニューから、システムツール-&gt;MATE端末を選択するか、キーボードの <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-t">T</kbd></span> を押してターミナルを起動します。</li>
-<li>
-<p>以下のコマンドを実行してユーザーにi2cの実行権限を付与します。</p>
-<div class="highlight"><pre><span></span><code>sudo usermod -aG i2c ユーザー名
-</code></pre></div>
-</li>
-<li>
-<p>以下のコマンドを実行して再起動します。</p>
-<div class="highlight"><pre><span></span><code>sudo reboot
-</code></pre></div>
-</li>
 </ol>
 <h3 id="setuppy">setup.pyの実行</h3>
 <p>Raspberry Piの設定変更と必須ライブラリの導入を行います。<br />
 手動で作業を行うこともできますが、以下のPythonファイルをご使用いただくことで自動で行えます。</p>
 <p>次のリンクを右クリックし、「Save Link As ...」を選択して「ホームフォルダ」に保存してください。</p>
-<p><a href="../../dl_files/ubuntu_setup.py">ubuntu_setup.py</a></p>
+<p><a href="../dl_files/ubuntu22_setup.py">ubuntu22_setup.py</a></p>
 <p>〇setup.pyの実行方法  </p>
 <ol>
-<li>ターミナルを起動して次のように入力し、ubuntu_setup.pyを実行します。<div class="highlight"><pre><span></span><code>sudo python3 ubuntu_setup.py
+<li>ターミナルを起動して次のように入力し、ubuntu_setup.pyを実行します。<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt upgrade
+sudo apt install python3-setuptools
+sudo python3 ubuntu_setup.py
 </code></pre></div>
 </li>
 </ol>
@@ -1582,33 +1572,46 @@ disable_overscan=1
 <li>ウィンドウの上部にある入力欄に、先ほど確認したライトローバーのIPアドレスを入力します。</li>
 <li>UsernameにUbuntuのユーザー名、PasswordにはVNCで設定したパスワードを入力します。</li>
 </ol>
-<h2 id="ros">ROSのセットアップ</h2>
-<h3 id="ros-noetic">ROS Noeticのインストール</h3>
-<p>ROS Noeticをインストールします。<br />
+<h2 id="ros2">ROS2のセットアップ</h2>
+<h3 id="ros2-humble">ROS2 Humbleのインストール</h3>
+<p>ROS2 Humbleをインストールします。<br />
 基本的には以下のサイトの説明に沿って進めて行きます。<br />
-<a href="http://wiki.ros.org/noetic/Installation/Ubuntu">ROS.org Ubuntu install of ROS Noetic</a></p>
+<a href="https://docs.ros.org/en/humble/Installation/Ubuntu-Install-Debians.html">ROS2 Documentation: Humble</a></p>
 <ol>
 <li>
-<p>ROSリポジトリの設定<br />
-    ROSのリポジトリをソースリストに追加することで、インストールできるようにします。<br />
-    ターミナルで次の2つのコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>echo &quot;deb http://packages.ros.org/ros/ubuntu focal main&quot; | sudo tee /etc/apt/sources.list.d/ros-focal.list
-</code></pre></div>
-<p><br></p>
-<div class="highlight"><pre><span></span><code>sudo apt-key adv --keyserver &#39;hkp://keyserver.ubuntu.com:80&#39; --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
-</code></pre></div>
-<p>続いてインデックスをアップデートします。<br />
-次の2つのコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo apt update
-</code></pre></div>
-<p><br></p>
-<div class="highlight"><pre><span></span><code>sudo apt upgrade
+<p>ロケールの設定<br />
+    UTF-8対応のロケールを設定します。<br />
+    ターミナルで以下のコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>sudo apt update &amp;&amp; sudo apt install locales
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
 </code></pre></div>
 </li>
 <li>
-<p>ROS Noeticのインストール
-    以下のコマンドを実行してROS Noeticをインストールします。</p>
-<div class="highlight"><pre><span></span><code>sudo apt install ros-noetic-desktop-full
+<p>ROS2リポジトリの設定<br />
+    ROS2のリポジトリをソースリストに追加することで、インストールできるようにします。<br />
+    まず以下の2つのコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>sudo apt install software-properties-common
+sudo add-apt-repository universe
+</code></pre></div>
+<p><br>
+ターミナルで次の2つのコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>sudo apt update &amp;&amp; sudo apt install curl -y
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+</code></pre></div>
+<p>最後にsource listにリポジトリを追加します。    </p>
+<div class="highlight"><pre><span></span><code>echo &quot;deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release &amp;&amp; echo $UBUNTU_CODENAME) main&quot; | sudo tee /etc/apt/sources.list.d/ros2.list &gt; /dev/null
+</code></pre></div>
+<p><br></p>
+</li>
+<li>
+<p>ROS2 Humbleのインストール
+    以下のコマンドを実行してROS2 Humbleをインストールします。</p>
+<div class="highlight"><pre><span></span><code>sudo apt update
+sudo apt upgrade
+sudo apt install ros-humble-desktop
+sudo apt install ros-dev-tools
 </code></pre></div>
 </li>
 <li>
@@ -1616,80 +1619,42 @@ disable_overscan=1
     ターミナルからコマンドを呼び出して実行する際には、そのコマンドに対するパスが通っている必要があります。<br />
     ターミナルを起動した際にROSへのパスが通るように設定を追加します。<br />
     ターミナルを立ち上げて以下のコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>echo &quot;source /opt/ros/noetic/setup.bash&quot; &gt;&gt; ~/.bashrc
-source ~/.bashrc
-</code></pre></div>
-</li>
-<li>
-<p>依存ソフトウェアのインストール<br />
-    ROSのビルドに必要なソフトウェアをインストールします。次のコマンドを実行してください。  </p>
-<div class="highlight"><pre><span></span><code>sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential
-</code></pre></div>
-</li>
-<li>
-<p>rosdepの初期化<br />
-    次の2つのコマンドを実行してrosdepを初期化します。  </p>
-<div class="highlight"><pre><span></span><code>sudo rosdep init
-</code></pre></div>
-<p><br></p>
-<div class="highlight"><pre><span></span><code>rosdep update
+<div class="highlight"><pre><span></span><code>source /opt/ros/humble/setup.bash
+echo &quot;source /opt/ros/humble/setup.bash&quot; &gt;&gt; ~/.bashrc
 </code></pre></div>
 </li>
 </ol>
-<p>以上で、ROS Melodicのインストールは完了です。</p>
-<h3 id="catkin">catkinワークスペースの作成</h3>
-<p>その他のパッケージのインストール用に新たにcatkinワークスペースを作成しましょう。<br />
-catkinはROS1のビルドシステムです。<br />
-<br>
-ROS Wikiのチュートリアルではcatkin_makeコマンドによるビルド方法が紹介されていますが、ライトローバーではcatkin buildを使用します。<br />
-catkin buildはcatkin_makeの後継として作られたコマンドで、catkin_makeで使い辛かった点などが改善されています。<br />
-<br>
-以下のコマンドをターミナルで実行し、catkin buikdをインストールします。  </p>
-<pre><code>sudo apt install python3-osrf-pycommon python3-catkin-tools
-</code></pre>
-<p>setup.bashを実行します。  </p>
-<pre><code>source /opt/ros/noetic/setup.bash
-</code></pre>
-<p>次のコマンドでワークスペースとなるフォルダを作成してください。  </p>
-<pre><code>mkdir -p ~/catkin_ws/src
-</code></pre>
-<p>作成したフォルダに移動します。  </p>
-<pre><code>cd ~/catkin_ws
-</code></pre>
-<p>catkinワークスペースを初期化します。  </p>
-<pre><code>catkin init
-</code></pre>
-<p>初期化が完了したら一度ビルドを実行しておきましょう。<br />
-catkin buildを実行します。  </p>
-<pre><code>catkin build
-</code></pre>
-<p>ROS本体と同様に、こちらのワークスペースにもパスが通るように設定します。  </p>
-<pre><code>echo &quot;source ~/catkin_ws/devel/setup.bash&quot; &gt;&gt; ~/.bashrc
+<p>以上で、ROS2 humbleのインストールは完了です。</p>
+<h3 id="_1">ワークスペースの作成</h3>
+<p>その他のパッケージのインストール用に新たにros2用のワークスペースを作成しましょう。<br />
+次のコマンドでワークスペースとなるフォルダを作成してください。  </p>
+<pre><code>mkdir -p ~/ros2_ws/src
 </code></pre>
 <p>以上で、ワークスペースの作成が完了です。</p>
-<h3 id="lightrover_ros">lightrover_rosパッケージのインストール</h3>
-<p>作成したワークスペースにライトローバーをROSから制御するためのパッケージ「lightrover_ros」をセットアップしましょう。<br />
+<h3 id="lightrover_ros2">lightrover_ros2パッケージのインストール</h3>
+<p>作成したワークスペースにライトローバーをROS2から制御するためのパッケージ「lightrover_ros2」をセットアップしましょう。<br />
 新たにターミナルを立ち上げて、次のコマンドでワークスペースのsrcフォルダに移動します。  </p>
-<pre><code>cd ~/catkin_ws/src
+<pre><code>cd ~/ros2_ws/src
 </code></pre>
 <p>次のコマンドで、Githubからlightrover_rosパッケージのソースをクローンします。</p>
-<pre><code>git clone -b noetic https://github.com/vstoneofficial/lightrover_ros.git
+<pre><code>git clone -b humble https://github.com/vstoneofficial/lightrover_ros2.git
 </code></pre>
-<p>catkin buildします。</p>
-<pre><code>catkin build
-</code></pre>
-<p>これでlightrover_rosパッケージのインストールは完了です。<br />
-しかし、このままではパッケージに含まれるPythonファイルに実行権限がなく起動できません。<br />
+<p>このままではパッケージに含まれるPythonファイルに実行権限がなく起動できません。<br />
 以下のコマンドで権限を付けましょう。</p>
-<pre><code>sudo chmod +x ~/catkin_ws/src/lightrover_ros/scripts/*.py
+<pre><code>sudo chmod +x ~/ros2_ws/src/lightrover_ros2/lightrover_ros/lightrover_ros/*.py
 </code></pre>
 <p>これで実行する準備が整いました。<br />
+ワークスペースをビルドします。  </p>
+<pre><code>cd ~/ros2_ws
+colcon build --symlink-install  --cmake-clean-cache  --parallel-workers 2
+</code></pre>
+<p>これでlightrover_ros2パッケージのインストールは完了です。<br />
 現在のターミナルはパスが通っていないので、ターミナルを立ち上げ直してパスが通っている状態にしてください。  </p>
 <h3 id="ydlidar">YDLiDARのセットアップ</h3>
 <p>ライトローバーに取付けられているLiDAR「YDLiDAR X2」を使用できるように、セットアップを行っていきましょう。
 まずは、YDLiDARのSDKをインストールします。<br />
 以下のコマンドでホームフォルダに移動します。  </p>
-<pre><code>cd
+<pre><code>cd ~
 </code></pre>
 <p>SDKのセットアップに必要なパッケージをインストールします。</p>
 <pre><code>sudo apt install cmake pkg-config
@@ -1714,19 +1679,191 @@ catkin buildを実行します。  </p>
 </code></pre>
 <p>続いてYDLiDAR用のROSデバイスドライバパッケージを入手します。
 ワークスペースのsrcフォルダに移動しましょう。</p>
-<pre><code>cd ~/catkin_ws/src
+<pre><code>cd ~/ros2_ws/src
 </code></pre>
 <p>次のコマンドで、Githubからydlidar_rosパッケージのソースをクローンします。</p>
-<pre><code>git clone https://github.com/YDLIDAR/ydlidar_ros_driver.git
+<pre><code>git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git
 </code></pre>
-<p>catkin buildします。</p>
-<pre><code>catkin build
+<p>ydlidar_ros2_driverの中の/src/ydlidar_ros2_driver_node.cpp 44~155行目を以下のように修正します。</p>
+<pre><code>  node-&gt;declare_parameter&lt;std::string&gt;(&quot;port&quot;);
+  node-&gt;get_parameter(&quot;port&quot;, str_optvalue);
+  ///lidar port
+  laser.setlidaropt(LidarPropSerialPort, str_optvalue.c_str(), str_optvalue.size());
+
+  ///ignore array
+  str_optvalue = &quot;&quot;;
+  node-&gt;declare_parameter&lt;std::string&gt;(&quot;ignore_array&quot;);
+  node-&gt;get_parameter(&quot;ignore_array&quot;, str_optvalue);
+  laser.setlidaropt(LidarPropIgnoreArray, str_optvalue.c_str(), str_optvalue.size());
+
+  std::string frame_id = &quot;laser_frame&quot;;
+  node-&gt;declare_parameter&lt;std::string&gt;(&quot;frame_id&quot;);
+  node-&gt;get_parameter(&quot;frame_id&quot;, frame_id);
+
+  //////////////////////int property/////////////////
+  /// lidar baudrate
+  int optval = 230400;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;baudrate&quot;);
+  node-&gt;get_parameter(&quot;baudrate&quot;, optval);
+  laser.setlidaropt(LidarPropSerialBaudrate, &amp;optval, sizeof(int));
+  /// tof lidar
+  optval = TYPE_TRIANGLE;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;lidar_type&quot;);
+  node-&gt;get_parameter(&quot;lidar_type&quot;, optval);
+  laser.setlidaropt(LidarPropLidarType, &amp;optval, sizeof(int));
+  /// device type
+  optval = YDLIDAR_TYPE_SERIAL;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;device_type&quot;);
+  node-&gt;get_parameter(&quot;device_type&quot;, optval);
+  laser.setlidaropt(LidarPropDeviceType, &amp;optval, sizeof(int));
+  /// sample rate
+  optval = 9;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;sample_rate&quot;);
+  node-&gt;get_parameter(&quot;sample_rate&quot;, optval);
+  laser.setlidaropt(LidarPropSampleRate, &amp;optval, sizeof(int));
+  /// abnormal count
+  optval = 4;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;abnormal_check_count&quot;);
+  node-&gt;get_parameter(&quot;abnormal_check_count&quot;, optval);
+  laser.setlidaropt(LidarPropAbnormalCheckCount, &amp;optval, sizeof(int));
+
+  /// Intenstiy bit count
+  optval = 8;
+  node-&gt;declare_parameter&lt;int&gt;(&quot;intensity_bit&quot;);
+  node-&gt;get_parameter(&quot;intensity_bit&quot;, optval);
+  laser.setlidaropt(LidarPropIntenstiyBit, &amp;optval, sizeof(int));
+
+  //////////////////////bool property/////////////////
+  /// fixed angle resolution
+  bool b_optvalue = false;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;fixed_resolution&quot;);
+  node-&gt;get_parameter(&quot;fixed_resolution&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropFixedResolution, &amp;b_optvalue, sizeof(bool));
+  /// rotate 180
+  b_optvalue = true;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;reversion&quot;);
+  node-&gt;get_parameter(&quot;reversion&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropReversion, &amp;b_optvalue, sizeof(bool));
+  /// Counterclockwise
+  b_optvalue = true;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;inverted&quot;);
+  node-&gt;get_parameter(&quot;inverted&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropInverted, &amp;b_optvalue, sizeof(bool));
+  b_optvalue = true;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;auto_reconnect&quot;);
+  node-&gt;get_parameter(&quot;auto_reconnect&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropAutoReconnect, &amp;b_optvalue, sizeof(bool));
+  /// one-way communication
+  b_optvalue = false;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;isSingleChannel&quot;);
+  node-&gt;get_parameter(&quot;isSingleChannel&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropSingleChannel, &amp;b_optvalue, sizeof(bool));
+  /// intensity
+  b_optvalue = false;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;intensity&quot;);
+  node-&gt;get_parameter(&quot;intensity&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropIntenstiy, &amp;b_optvalue, sizeof(bool));
+  /// Motor DTR
+  b_optvalue = false;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;support_motor_dtr&quot;);
+  node-&gt;get_parameter(&quot;support_motor_dtr&quot;, b_optvalue);
+  laser.setlidaropt(LidarPropSupportMotorDtrCtrl, &amp;b_optvalue, sizeof(bool));
+
+  //////////////////////float property/////////////////
+  /// unit: °
+  float f_optvalue = 180.0f;
+  node-&gt;declare_parameter&lt;float&gt;(&quot;angle_max&quot;);
+  node-&gt;get_parameter(&quot;angle_max&quot;, f_optvalue);
+  laser.setlidaropt(LidarPropMaxAngle, &amp;f_optvalue, sizeof(float));
+  f_optvalue = -180.0f;
+  node-&gt;declare_parameter&lt;float&gt;(&quot;angle_min&quot;);
+  node-&gt;get_parameter(&quot;angle_min&quot;, f_optvalue);
+  laser.setlidaropt(LidarPropMinAngle, &amp;f_optvalue, sizeof(float));
+  /// unit: m
+  f_optvalue = 64.f;
+  node-&gt;declare_parameter&lt;float&gt;(&quot;range_max&quot;);
+  node-&gt;get_parameter(&quot;range_max&quot;, f_optvalue);
+  laser.setlidaropt(LidarPropMaxRange, &amp;f_optvalue, sizeof(float));
+  f_optvalue = 0.1f;
+  node-&gt;declare_parameter&lt;float&gt;(&quot;range_min&quot;);
+  node-&gt;get_parameter(&quot;range_min&quot;, f_optvalue);
+  laser.setlidaropt(LidarPropMinRange, &amp;f_optvalue, sizeof(float));
+  /// unit: Hz
+  f_optvalue = 10.f;
+  node-&gt;declare_parameter&lt;float&gt;(&quot;frequency&quot;);
+  node-&gt;get_parameter(&quot;frequency&quot;, f_optvalue);
+  laser.setlidaropt(LidarPropScanFrequency, &amp;f_optvalue, sizeof(float));
+
+  bool invalid_range_is_inf = false;
+  node-&gt;declare_parameter&lt;bool&gt;(&quot;invalid_range_is_inf&quot;);
+  node-&gt;get_parameter(&quot;invalid_range_is_inf&quot;, invalid_range_is_inf);
+</code></pre>
+<p>次にLRFに関するパラメータは/params/X2.yamlを以下に以下のパラメータを追記します。</p>
+<pre><code>intensity_bit: 0
+</code></pre>
+<p>また/launch/ydlidar_launch.pyを以下のように修正します。</p>
+<pre><code>#!/usr/bin/python3
+# Copyright 2020, EAIBOT
+# Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+from ament_index_python.packages import get_package_share_directory
+
+from launch import LaunchDescription
+from launch_ros.actions import LifecycleNode
+from launch_ros.actions import Node
+from launch.actions import DeclareLaunchArgument
+from launch.substitutions import LaunchConfiguration
+from launch.actions import LogInfo
+
+import lifecycle_msgs.msg
+import os
+
+
+def generate_launch_description():
+    share_dir = get_package_share_directory('ydlidar_ros2_driver')
+    parameter_file = LaunchConfiguration('params_file')
+    node_name = 'ydlidar_ros2_driver_node'
+
+    params_declare = DeclareLaunchArgument('params_file',
+                                           default_value=os.path.join(
+                                               share_dir, 'params', 'X2.yaml'),
+                                           description='FPath to the ROS2 parameters file to use.')
+
+    driver_node = LifecycleNode(package='ydlidar_ros2_driver',
+                                executable='ydlidar_ros2_driver_node',
+                                name='ydlidar_ros2_driver_node',
+                                output='screen',
+                                emulate_tty=True,
+                                parameters=[parameter_file],
+                                node_namespace='/',
+                                )
+    tf2_node = Node(package='tf2_ros',
+                    executable='static_transform_publisher',
+                    name='static_tf_pub_laser',
+                    arguments=['0', '0', '0.02','0', '0', '0', '1','base_link','laser_frame'],
+                    )
+
+    return LaunchDescription([
+        params_declare,
+        driver_node,
+        tf2_node,
+    ])
 </code></pre>
 <p>続いて、YDLiDAR X2接続時の手間を省くため、シンボリックリンクを張る操作を行います。<br />
 Ubuntuにデバイスを接続するとデバイスファイルが作成されてアクセスできるようになるのですが、デバイスファイル名は接続ポートやタイミングによって変わってきてしまうため、毎回デバイスファイル名でアクセスするのは不便です。<br />
 次の手順でスクリプトを実行することで、ydlidarのデバイスファイルに対して決まった名前でシンボリックリンクを張るようになりますので、毎回決まった名前でアクセスすることが可能になります。<br />
 新しくターミナルを起動し、スクリプトがあるディレクトリに移動します。  </p>
-<pre><code>roscd ydlidar_ros_driver/startup/
+<pre><code>cd ~/ros2_ws/src/ydlidar_ros2_driver/startup/
 </code></pre>
 <p>スクリプトファイルに権限をつけます。  </p>
 <pre><code>sudo chmod 777 ./*
@@ -1736,11 +1873,14 @@ Ubuntuにデバイスを接続するとデバイスファイルが作成され�
 </code></pre>
 <p>スクリプトが完了したらターミナルを再起動し、Raspberry Piに接続されているYDLiDARのUSBケーブルを一度抜差ししてください。<br />
 <br>
-YDLiDARのセットアップは完了です。</p>
+ワークスペースをビルドします。  </p>
+<pre><code>cd ~/ros2_ws
+colcon build --symlink-install  --cmake-clean-cache  --parallel-workers 2
+</code></pre>
+<p>YDLiDARのセットアップは完了です。</p>
 <p><br>
 <br>
-以上で、ライトローバーをROSで制御する準備が整いました。<br />
-引き続き、<a href="../../software/aboutROS/">ROSとは</a>の項目で、ROSの概要について確認することができます。  </p>
+以上で、ライトローバーをROS2で制御する準備が整いました。  </p>
 
 
 
