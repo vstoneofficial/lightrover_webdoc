@@ -507,6 +507,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    同時に複数のライトローバーを動作させる場合
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1418,6 +1425,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    同時に複数のライトローバーを動作させる場合
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1436,7 +1450,7 @@
 <h1 id="-ubuntu-mate-">ソフトウェアセットアップ -Ubuntu MATE-</h1>
 <p>ライトローバーを動作させせるためには、OSや各ライブラリのセットアップが必要です。<br />
 以下の手順で、ライトローバーを動作させるための環境を構築していきましょう。<br />
-なお本ページはROS2をUbuntu MATEで使用する場合の手順です。<br />
+なお本ページはROS 2をUbuntu MATEで使用する場合の手順です。<br />
 ROS1については、Raspberry Pi OSを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetup/">こちら</a>、<br />
 Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lightrover_webdoc/setup/softwareSetupUbuntu/">こちら</a>をご参照ください。</p>
 <h2 id="os">OSのセットアップと設定</h2>
@@ -1481,13 +1495,13 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 <p>Raspberry Piの設定変更と必須ライブラリの導入を行います。<br />
 手動で作業を行うこともできますが、以下のPythonファイルをご使用いただくことで自動で行えます。</p>
 <p>次のリンクを右クリックし、「Save Link As ...」を選択して「ホームフォルダ」に保存してください。</p>
-<p><a href="../dl_files/ubuntu22_setup.py">ubuntu22_setup.py</a></p>
+<p><a href="../../dl_files/ubuntu22_setup.py">ubuntu22_setup.py</a></p>
 <p>〇setup.pyの実行方法  </p>
 <ol>
 <li>ターミナルを起動して次のように入力し、ubuntu_setup.pyを実行します。<div class="highlight"><pre><span></span><code>sudo apt update
 sudo apt upgrade
 sudo apt install python3-setuptools
-sudo python3 ubuntu_setup.py
+sudo python3 ubuntu22_setup.py
 </code></pre></div>
 </li>
 </ol>
@@ -1878,6 +1892,20 @@ Ubuntuにデバイスを接続するとデバイスファイルが作成され�
 colcon build --symlink-install  --cmake-clean-cache  --parallel-workers 2
 </code></pre>
 <p>YDLiDARのセットアップは完了です。</p>
+<h2 id="_2">同時に複数のライトローバーを動作させる場合</h2>
+<p>複数のライトローバーが同一ネットワークに接続された状態でROS2で動作させようとすると、<br />
+別の機体からの指令を受け取ってしまい動作がおかしくなります。<br />
+こういった事態を防ぐためにROS_DOMAIN_IDをあらかじめ指定しておきましょう。<br />
+ターミナルを立ち上げて以下のコマンドを実行してください。<br />
+なおROS_DOMAIN_IDは機体ごとに変更してください。<br />
+0~65535まで指定が可能です。  </p>
+<pre><code>export ROS_DOMAIN_ID=1
+</code></pre>
+<p>これでROS_DOMAIN_IDの指定が出来ました。ライトローバーを走行させてみましょう。<br />
+複数の機体を動作させても信号が混ざらなくなります。<br />
+下記のように.bashrcに追記しておくことで、シェル起動時に自動的に設定されるようにすることもできます。  </p>
+<pre><code>echo &quot;export ROS_DOMAIN_ID=1&quot; &gt;&gt; ~/.bashrc
+</code></pre>
 <p><br>
 <br>
 以上で、ライトローバーをROS2で制御する準備が整いました。  </p>
