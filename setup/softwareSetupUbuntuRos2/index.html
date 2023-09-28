@@ -62,12 +62,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -93,8 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
     <a href="../.." title="ライトローバーWebDoc" class="md-header__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,6 +121,30 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ダークモードに切り替えます。"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替えます。" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ライトモードに切り替えます。"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替えます。" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
       
     
     
@@ -187,8 +214,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ライトローバーWebDoc" class="md-nav__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     ライトローバーWebDoc
@@ -1562,8 +1588,27 @@ sudo systemctl start x11vnc
 <li>
 <p>以下の内容を追記し、保存します。</p>
 <div class="highlight"><pre><span></span><code>hdmi_force_hotplug=1
-hdmi_group=2
+hdmi_group=1
+hdmi_mode=5
 disable_overscan=1
+</code></pre></div>
+</li>
+<li>
+<p>テキストエディタで/boot/firmware/config.txtを編集します。</p>
+<div class="highlight"><pre><span></span><code>sudo nano /boot/firmware/config.txt
+</code></pre></div>
+</li>
+<li>
+<p>指定の行を以下のように修正します。  </p>
+<p>30行目</p>
+<div class="highlight"><pre><span></span><code>#dtoverlay=dwc2,dr_mode=host
+</code></pre></div>
+<p>36行目</p>
+<div class="highlight"><pre><span></span><code>dtoverlay=vc4-fkms-v3d
+</code></pre></div>
+<p>最後に以下を追記し、保存します。</p>
+<div class="highlight"><pre><span></span><code>include syscfg.txt
+include usercfg.txt
 </code></pre></div>
 </li>
 <li>

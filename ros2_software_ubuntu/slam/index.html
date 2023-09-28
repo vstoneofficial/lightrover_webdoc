@@ -62,12 +62,16 @@
   
     
     
+      
+    
     
     
     
     <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink">
   
     
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
@@ -93,8 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
     <a href="../.." title="ライトローバーWebDoc" class="md-header__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,6 +121,30 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ダークモードに切り替えます。"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替えます。" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ライトモードに切り替えます。"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替えます。" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
       
     
     
@@ -187,8 +214,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ライトローバーWebDoc" class="md-nav__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     ライトローバーWebDoc
@@ -867,15 +893,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gmapping" class="md-nav__link">
-    gmappingのセットアップ
+  <a href="#slam-toolbox" class="md-nav__link">
+    slam-toolboxのセットアップ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gmapping_1" class="md-nav__link">
-    gmappingの実行
+  <a href="#slam-toolbox_1" class="md-nav__link">
+    slam-toolboxの実行
   </a>
   
 </li>
@@ -1262,15 +1288,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#gmapping" class="md-nav__link">
-    gmappingのセットアップ
+  <a href="#slam-toolbox" class="md-nav__link">
+    slam-toolboxのセットアップ
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#gmapping_1" class="md-nav__link">
-    gmappingの実行
+  <a href="#slam-toolbox_1" class="md-nav__link">
+    slam-toolboxの実行
   </a>
   
 </li>
@@ -1318,14 +1344,14 @@ LRFのデータと、車輪の回転数から移動量を計測するオドメ�
 <p>図中の黒い部分は障害物が存在する通行不可能な箇所、白い領域は通行可能な場所、灰色は未知領域です。<br />
 地図はグリッド状になっており、各グリッドには障害物が存在する確率（占有確率）を示す0～100の値もしくは、未知領域を示す-1の値が与えられます。<br />
 この占有確率を用いた地図の表現方法は、ROSの2Dマップ表現方法として標準化されています。  </p>
-<h2 id="gmapping">gmappingのセットアップ</h2>
+<h2 id="slam-toolbox">slam-toolboxのセットアップ</h2>
 <p>次のコマンドでslam-toolboxパッケージをインストールします。  </p>
 <pre><code>sudo apt install ros-humble-slam-toolbox
 </code></pre>
-<h2 id="gmapping_1">gmappingの実行</h2>
+<h2 id="slam-toolbox_1">slam-toolboxの実行</h2>
 <p>次のコマンドでslamを実行しましょう。  </p>
 <pre><code>sudo chmod 777 /dev/ttyUSB0
-cd /ros2_ws
+cd ~/ros2_ws
 . install/setup.bash
 ros2 launch lightrover_ros lightrover_slam.launch.py
 </code></pre>

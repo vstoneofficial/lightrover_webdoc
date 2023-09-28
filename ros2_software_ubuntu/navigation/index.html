@@ -62,6 +62,8 @@
   
     
     
+      
+    
     
     
     
@@ -69,13 +71,15 @@
   
     
     
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#navigation" class="md-skip">
+        <a href="#nav2" class="md-skip">
           コンテンツにスキップ
         </a>
       
@@ -93,8 +97,7 @@
   <nav class="md-header__inner md-grid" aria-label="ヘッダー">
     <a href="../.." title="ライトローバーWebDoc" class="md-header__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -118,6 +121,30 @@
       </div>
     </div>
     
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ダークモードに切り替えます。"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="ダークモードに切り替えます。" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 6H7c-3.31 0-6 2.69-6 6s2.69 6 6 6h10c3.31 0 6-2.69 6-6s-2.69-6-6-6zm0 10H7c-2.21 0-4-1.79-4-4s1.79-4 4-4h10c2.21 0 4 1.79 4 4s-1.79 4-4 4zM7 9c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="ライトモードに切り替えます。"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="ライトモードに切り替えます。" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 7H7a5 5 0 0 0-5 5 5 5 0 0 0 5 5h10a5 5 0 0 0 5-5 5 5 0 0 0-5-5m0 8a3 3 0 0 1-3-3 3 3 0 0 1 3-3 3 3 0 0 1 3 3 3 3 0 0 1-3 3Z"/></svg>
+      </label>
+    
+  
+</form>
       
     
     
@@ -187,8 +214,7 @@
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="ライトローバーWebDoc" class="md-nav__button md-logo" aria-label="ライトローバーWebDoc" data-md-component="logo">
       
-  
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54Z"/></svg>
+  <img src="../../img/IMG_1654r.jpg" alt="logo">
 
     </a>
     ライトローバーWebDoc
@@ -850,6 +876,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    自律走行させよう
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -859,6 +896,73 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="目次">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nav2_1" class="md-nav__link">
+    Nav2のセットアップ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    地図の作成と読み込み
+  </a>
+  
+    <nav class="md-nav" aria-label="地図の作成と読み込み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    地図の作成と保存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    地図ファイルの移動
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launch" class="md-nav__link">
+    launchファイルの編集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自律移動の実行
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1204,6 +1308,62 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      目次
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#nav2_1" class="md-nav__link">
+    Nav2のセットアップ
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    地図の作成と読み込み
+  </a>
+  
+    <nav class="md-nav" aria-label="地図の作成と読み込み">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    地図の作成と保存
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    地図ファイルの移動
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#launch" class="md-nav__link">
+    launchファイルの編集
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    自律移動の実行
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1217,8 +1377,114 @@
                   
 
 
-<h1 id="navigation">navigationで自律走行させよう</h1>
-<p>ROS2でのナビゲーションの実行サンプルは現在準備中です。  </p>
+<h1 id="nav2">Nav2で自律走行させよう</h1>
+<p>ロボットの自律移動を行うためには、自己位置推定や移動経路のプランニングといった技術が必要です。<br />
+ROS 2ではNav2というパッケージでこれらの機能が提供されています。<br />
+Nav2はROS Navigation Stackの精神的後継のパッケージです。<br />
+ここでは、SLAM（slam-toolbox）サンプルを用いて作成した地図を使って、ライトローバーを目標地点まで自律的に移動させてみましょう。<br />
+<br>
+平面で、オドメトリの誤差原因となるタイヤの滑りが少なく、分かれ道や柱の凹凸など、分かりやすい特徴が存在する通路といった環境でお試しください。<br />
+LiDARでは捉えられない高さに障害物があったり、イスやテーブルの脚といった小さな障害物が多く存在する環境では正常に動作させることが難しくなります。<br />
+<span style="color: red; ">また、電源はRaspberry PiのUSB Type-Cポートに接続することを強く推奨します。<br />
+バッテリーを使用する場合も、micro B to USB Type-Cの変換コネクタなどを使用するなどでRapberry Piの電源ポートを使用することで動作が安定します。  </p>
+<h2 id="nav2_1">Nav2のセットアップ</h2>
+<p>まずは依存しているライブラリをインストールします。</p>
+<pre><code>sudo apt install ros-humble-joint-state-publisher ros-humble-xacro
+</code></pre>
+<p>次のコマンドでNav2をインストールします。</p>
+<pre><code>sudo apt install ros-humble-navigation2
+sudo apt install ros-humble-nav2-bringup
+</code></pre>
+<p>エラーが出なければインストール終了です。</p>
+<h2 id="_1">地図の作成と読み込み</h2>
+<p>まず、ロボットが移動する環境の地図を作成します。<br />
+自律移動を行うためには、できるだけ正確な地図が必要です。<br />
+また、launchファイルを編集し、作成した地図が読み込まれるようにします。  </p>
+<h3 id="_2">地図の作成と保存</h3>
+<p><a href="../slam/">SLAMをしよう</a>の手順に従って、地図の作成と保存を行ってください。<br />
+ここでは地図を「test1」という名前で保存し、「test1.pgm」と「test1.yaml」というファイルがホームフォルダに生成された、という前提で説明を続けます。  </p>
+<h3 id="_3">地図ファイルの移動</h3>
+<p>「test1.pgm」と「test1.yaml」を移動させます。<br />
+ファイルマネージャ等を用いて、2つのファイルを以下のアドレスにコピーまたは移動させてください。  </p>
+<pre><code>/home/pi/ros2_ws/src/lightrover_ros2/lightrover_navigation/maps
+</code></pre>
+<p>初期状態であれば、test.pgmとtest.yamlという2つのファイルが存在しています。<br />
+「test1.pgm」と「test1.yaml」を加えて4つのファイルがある状態にしてください。<br />
+<img alt="image" src="../../img/mv_map_1.png" />  </p>
+<div class="admonition 参考">
+<p class="admonition-title">参考</p>
+<p>あくまで説明のための表現です。実際には、使用したいマップのpgmファイルとyamlファイルの2つがあれば問題ありません。</p>
+</div>
+<h3 id="launch">launchファイルの編集</h3>
+<p>作成した地図が読み込まれるように、「lightrover_move_base_dwa.launch」を編集しましょう。<br />
+launchファイルをgeditで開きます。  </p>
+<pre><code>gedit /home/pi/ros2_ws/src/lightrover_ros2/lightrover_navigation/launch/lightrover_navigation.launch.py
+</code></pre>
+<p>次の行を探し、“ファイル名.yaml”を、先ほど保存，移動させた地図ファイルのファイル名に合わせて設定します。  </p>
+<pre><code>default=os.path.join(
+            get_package_share_directory('lightrover_navigation'),
+            'maps',
+            'ファイル名.yaml')) 
+</code></pre>
+<p>例では「test1.yaml」ですので、次のようになります。  </p>
+<pre><code>default=os.path.join(
+            get_package_share_directory('lightrover_navigation'),
+            'maps',
+            'test1.yaml')) 
+</code></pre>
+<h2 id="_4">自律移動の実行</h2>
+<p>それではnavigationサンプルを実行して、ライトローバーに自律移動をさせてみましょう。
+なお、環境によっては上手く自律移動できないことがあります。
+その場合は、各機能のパラメータを調整いただくことで、改善する可能性があります。
+サンプルプログラムではオドメトリの影響が小さくなるようパラメータを設定しています。</p>
+<ol>
+<li>
+<p>launchファイルの呼び出し<br />
+    オドメトリの取得やLiDARの制御を行うノードをまとめたnav_base.launch.pyを実行します。<br />
+    地図を作製したポイントにライトローバーを置き、下記のコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>cd ~/ros2_ws/
+. install/setup.bash
+sudo chmod 777 /dev/i2c-*
+sudo chmod 777 /dev/ttyUSB0
+ros2 launch lightrover_ros nav_base.launch.py
+</code></pre></div>
+<p>Nav2を実行します。<br />
+新しいターミナルを開いて下記のコマンドを実行してください。  </p>
+<div class="highlight"><pre><span></span><code>cd ~/ros2_ws/
+. install/setup.bash
+ros2 launch lightrover_navigation lightrover_navigation.launch.py
+</code></pre></div>
+</li>
+<li>
+<p>初期位置の設定<br />
+    navigationサンプルの起動時、ライトローバーは地図の作成開始地点にあることになっています。<br />
+    現実のライトローバーの位置とズレがある場合は、おおよその初期位置を教えてやる必要があります。<br />
+    画面上部の「2D Pose Estimate」ボタンをクリックしてから、ライトローバーの実際の初期位置をクリックし、ドラッグして方向を決めます。<br />
+<img alt="image" src="../../img/navigation_2.png" /><br />
+    次に示すように、mapの壁や障害物と、LiDARの検出結果がおおよそ一致するようになるまで調整を行ってください。<br />
+<img alt="image" src="../../img/navigation_4.png" /><br />
+    このとき、指定したメカナムローバーの位置周辺に青い小さな点がいくつも散らばっていることが確認できます。<br />
+    これらは、navigationスタック内で自己位置推定を担うノード「amcl」が計算する、ライトローバーの推定自己位置を示すパーティクルです。<br />
+    動作開始前は自己位置が定まっていないため、青い点は広範囲に散らばっています。  </p>
+</li>
+<li>
+<p>目標位置の設定<br />
+    初期位置の設定を完了したら、いよいよライトローバーの移動目標地点を設定します。<br />
+    なお目標地点を設定すると、ライトローバーは即座に走行を開始しますので注意してください。<br />
+    画面上部の「2D Nav Goal」ボタンをクリックしてから、目標位置をクリックし、ドラッグして方向を決めてください。<br />
+<img alt="image" src="../../img/navigation_3.png" /><br />
+    目標位置を設定すると、ライトローバーは即座に走行を開始します。<br />
+    走行中のRvizの様子を下図に示します。<br />
+    計画された移動経路が緑線で、目標位置姿勢が赤矢印で示されています。<br />
+    また、検出されている障害物の周りには色が付いた領域が存在します。<br />
+    これらは、観測結果をもとに数値化された衝突危険性を表すコストマップです。<br />
+<img alt="image" src="../../img/navigation_5.png" />  </p>
+</li>
+<li>
+<p>走行の終了<br />
+    ライトローバーは目標位置に到達すると、自動的に停止します。そこから新たに目標位置を設定することも可能です。  </p>
+</li>
+</ol>
 
 
 
