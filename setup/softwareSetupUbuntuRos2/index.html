@@ -1696,7 +1696,7 @@ echo &quot;source /opt/ros/humble/setup.bash&quot; &gt;&gt; ~/.bashrc
 <pre><code>cd ~/ros2_ws/src
 </code></pre>
 <p>次のコマンドで、Githubからlightrover_rosパッケージのソースをクローンします。</p>
-<pre><code>git clone -b humble https://github.com/vstoneofficial/lightrover_ros2.git
+<pre><code>git clone --recursive -b humble https://github.com/vstoneofficial/lightrover_ros2.git
 </code></pre>
 <p>このままではパッケージに含まれるPythonファイルに実行権限がなく起動できません。<br />
 以下のコマンドで権限を付けましょう。</p>
