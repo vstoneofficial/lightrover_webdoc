@@ -452,7 +452,7 @@
         
   
   <span class="md-ellipsis">
-    Raspberry Pi OS
+    ROS1(Raspberry Pi OS)
   </span>
   
 
@@ -473,7 +473,7 @@
         
   
   <span class="md-ellipsis">
-    Ubuntu MATE
+    ROS1(Ubuntu MATE)
   </span>
   
 
@@ -490,11 +490,32 @@
   
   
     <li class="md-nav__item">
-      <a href="../softwareSetupUbuntuRos2/" class="md-nav__link">
+      <a href="../softwareSetupUbuntuRos2_humble/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    Ubuntu MATE(ROS2)
+    ROS2 Humble
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../softwareSetupUbuntuRos2_jazzy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 Jazzy
   </span>
   
 
@@ -913,7 +934,7 @@
             
   
   <span class="md-ellipsis">
-    Ubuntu MATE
+    Humble
   </span>
   
 
@@ -923,7 +944,7 @@
         <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_4_1">
             <span class="md-nav__icon md-icon"></span>
-            Ubuntu MATE
+            Humble
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -934,7 +955,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ros2_software_ubuntu/gamePadCtrl/" class="md-nav__link">
+      <a href="../../ros2_software_humble/gamePadCtrl/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -955,7 +976,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ros2_software_ubuntu/slam/" class="md-nav__link">
+      <a href="../../ros2_software_humble/slam/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -976,7 +997,113 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ros2_software_ubuntu/navigation/" class="md-nav__link">
+      <a href="../../ros2_software_humble/navigation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    自律走行させよう
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_4_2" id="__nav_4_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Jazzy
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_4_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4_2">
+            <span class="md-nav__icon md-icon"></span>
+            Jazzy
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2_software_jazzy/gamePadCtrl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ゲームパッドで走行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2_software_jazzy/slam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SLAMをしよう
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ros2_software_jazzy/navigation/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1476,6 +1603,12 @@
 <td style="text-align: left;">HDMIケーブルが、片側がmicro HDMIになっているもの場合は不要</td>
 </tr>
 <tr>
+<td style="text-align: left;">ダミーHDMI</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ROS2のリモート操作時、地図の表示などに必要</td>
+<td style="text-align: left;"></td>
+</tr>
+<tr>
 <td style="text-align: left;">PC</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: left;">OSの書き込みに必要</td>
@@ -1488,10 +1621,16 @@
 <td style="text-align: left;">PCに付属の場合は不要</td>
 </tr>
 <tr>
+<td style="text-align: left;">モバイルバッテリー</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">ROS2での動作に必要</td>
+<td style="text-align: left;">　3A以上出力可能なものを推奨</td>
+</tr>
+<tr>
 <td style="text-align: left;">単三ニッケル水素充電池</td>
 <td style="text-align: right;">4</td>
 <td style="text-align: left;">ライトローバーの動作に必要</td>
-<td style="text-align: left;"></td>
+<td style="text-align: left;">モバイルバッテリーを使用する場合は不要</td>
 </tr>
 <tr>
 <td style="text-align: left;">USB ACアダプタ</td>
@@ -1509,7 +1648,7 @@
 <td style="text-align: left;">ゲームパッド</td>
 <td style="text-align: right;">1</td>
 <td style="text-align: left;">一部サンプルプログラムの実行に必要</td>
-<td style="text-align: left;">必須ではないがあると便利</td>
+<td style="text-align: left;">必須ではないがあると便利。  ROS2 HumbleまではDualShock®4、JazzyはXbox ワイヤレス コントローラーを推奨。</td>
 </tr>
 </tbody>
 </table>
@@ -1533,7 +1672,8 @@ Raspberry PiからI2C通信を利用して制御されます。<br />
 <li>ライトローバーに搭載されているRaspberry Piに、モニタ、USBマウス、USBキーボード、OSを書き込んだmicroSDカードを接続します。</li>
 <li>VS-WRC201に電源ケーブルを接続します。<br />
     なおソフトウェアの設定や、プログラムの開発を行う際は、電源にUSB ACアダプタを利用することをお勧めします。<br />
-    電池を使用する場合は、単三ニッケル水素充電池を電池ボックスに入れてください。</li>
+    電池を使用する場合は、単三ニッケル水素充電池を電池ボックスに入れてください。
+    ※ROS2を使用する場合はモバイルバッテリーをRaspberry Piに直接接続してください。</li>
 </ol>
 <p><br>  </p>
 
