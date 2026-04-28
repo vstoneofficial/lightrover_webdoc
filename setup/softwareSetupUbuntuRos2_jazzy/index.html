@@ -1694,7 +1694,7 @@ Ubuntu MATEを使用する場合は<a href="https://vstoneofficial.github.io/lig
 <h2 id="os">OSのセットアップと設定</h2>
 <p>OSのセットアップや、ライトローバーを動作させるために必要な設定などを行います。<br />
 <span style="color: red; ">なおライトローバーでROS2を動作せる場合、消費電力の関係上、電源はRaspberry PiのUSB Type-Cポートに接続することを強く推奨します。<br />
-バッテリーを使用する場合も、micro B to USB Type-Cの変換コネクタなどを使用するなどでRapberry Piの電源ポートを使用することで動作が安定します。  </p>
+バッテリーを使用する場合も、Rapberry Piの電源ポートを使用することで動作が安定します。  </p>
 <h2 id="ubuntu-mate">Ubuntu MATEのセットアップ</h2>
 <h3 id="os_1">OSの書込み</h3>
 <p>microSDカードにRaspberry Piに対応したOS「Ubuntu MATE」を書込みます。</p>
@@ -1936,7 +1936,7 @@ colcon build --symlink-install  --cmake-clean-cache  --parallel-workers 2
 <p>次のコマンドで、Githubからydlidar_rosパッケージのソースをクローンします。</p>
 <pre><code>git clone https://github.com/YDLIDAR/ydlidar_ros2_driver.git
 </code></pre>
-<p>/ydlodar_ros2_diver/src/ydlidar_ros2_driver_node.cppを以下のように修正します。</p>
+<p>/ydlidar_ros2_diver/src/ydlidar_ros2_driver_node.cppを以下のように修正します。</p>
 <pre><code>#ifdef _MSC_VER
 #ifndef _USE_MATH_DEFINES
 #define _USE_MATH_DEFINES
