@@ -1293,7 +1293,7 @@
         
   
   <span class="md-ellipsis">
-    Raspberry Pi OS
+    ROS1(Raspberry Pi OS)
   </span>
   
 
@@ -1314,7 +1314,28 @@
         
   
   <span class="md-ellipsis">
-    Ubuntu MATE
+    ROS1(Ubuntu MATE)
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../option_ubuntu/cam/camOption_jazzy/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ROS2 Jazzy(Ubuntu MATE)
   </span>
   
 
@@ -1611,13 +1632,13 @@ launchファイルをgeditで開きます。  </p>
 <pre><code>default=os.path.join(
             get_package_share_directory('lightrover_navigation'),
             'maps',
-            'ファイル名.yaml')) 
+            'ファイル名.yaml')
 </code></pre>
 <p>例では「test1.yaml」ですので、次のようになります。  </p>
 <pre><code>default=os.path.join(
             get_package_share_directory('lightrover_navigation'),
             'maps',
-            'test1.yaml')) 
+            'test1.yaml')
 </code></pre>
 <h2 id="_4">自律移動の実行</h2>
 <p>それではnavigationサンプルを実行して、ライトローバーに自律移動をさせてみましょう。
