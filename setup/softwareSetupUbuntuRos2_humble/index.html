@@ -1887,6 +1887,16 @@ include usercfg.txt
 </code></pre></div>
 </li>
 <li>
+<p>テキストエディタで/boot/firmware/cmdline.txtを編集します。</p>
+<div class="highlight"><pre><span></span><code>sudo nano /boot/firmware/cmdline.txt
+</code></pre></div>
+</li>
+<li>
+<p>1行目の行末にスペースを1つ空けて下記の内容を追記します。</p>
+<div class="highlight"><pre><span></span><code>video=HDMI-A-1:1920x1080@60D
+</code></pre></div>
+</li>
+<li>
 <p>一度電源を切り再起動します。</p>
 <div class="highlight"><pre><span></span><code>sudo poweroff
 </code></pre></div>
