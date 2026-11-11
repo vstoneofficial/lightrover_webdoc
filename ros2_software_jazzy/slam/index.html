@@ -9,7 +9,7 @@
       
       
       
-        <link rel="prev" href="../gamePadCtrl/">
+        <link rel="prev" href="../keyboardCtrl/">
       
       
         <link rel="next" href="../navigation/">
@@ -581,6 +581,48 @@
   
   <span class="md-ellipsis">
     ゲームパッドで走行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../mouseCtrl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    マウスで走行
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../keyboardCtrl/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    キーボードで走行
   </span>
   
 
@@ -1591,7 +1633,7 @@ ROSには、このSLAM手法を実装したパッケージが存在しており�
 ROSでSLAMを実装したパッケージはいくつか存在しますが、ここでは「slam-toolbox」を利用して、SLAMを実行してみましょう。<br />
 <br>
 SLAM（slam-toolbox）サンプルは、ライトローバー上部に取り付けられたLiDARで取得した情報をもとに、自己位置の推定と周囲の環境地図の作成を行います。<br />
-ライトローバーの移動は手動で行う必要がありますので、ゲームパッド操作サンプルを一緒に使用します。<br />
+ライトローバーの移動は手動で行う必要がありますので、ゲームパッド操作サンプル、マウス操作サンプル、キーボード操作サンプルのいずれかを一緒に使用します。<br />
 <br>
 LiDARは、周囲に存在する物体の位置を検出することができるセンサです。<br />
 レーザー光を発射し、その反射を見て物体の有無を確認しています。<br />
@@ -1615,9 +1657,14 @@ cd ~/ros2_ws
 . install/setup.bash
 ros2 launch lightrover_ros lightrover_slam.launch.py
 </code></pre>
-<p>また、ライトローバーの移動は手動で行う必要がありますので、ゲームパッド操作サンプルを一緒に使用します。<br />
-「ゲームパッドで走行しよう」を参考に、ゲームパッド操作サンプルを新しいターミナルで実行してください。<br />
-slamが起動すると次のようにRvizが起動し画面が表示されます。  </p>
+<p>また、ライトローバーの移動は手動で行う必要がありますので、操作サンプルを一緒に使用します。<br />
+以下のいずれかのページを参考に、操作サンプルを新しいターミナルで実行してください。  </p>
+<ul>
+<li><a href="../gamePadCtrl/">ゲームパッドで走行しよう</a>（pos_joycon.launch.py）</li>
+<li><a href="../mouseCtrl/">マウスで走行しよう</a>（pos_mouse.launch.py）</li>
+<li><a href="../keyboardCtrl/">キーボードで走行しよう</a>（pos_keyboard.launch.py）</li>
+</ul>
+<p>slamが起動すると次のようにRvizが起動し画面が表示されます。  </p>
 <p><img alt="image" src="../../img/slam-toolbox_1.png" />  </p>
 <p>Rviz上にはLRFが捉えている障害物と、生成される地図がリアルタイムで表示されます。<br />
 画面が表示されなかったりLRFのデータが表示されなかったりした場合は、起動中に何らかのエラーが発生した可能性があります。<br />
